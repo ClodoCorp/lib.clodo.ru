@@ -1211,6 +1211,7 @@
 	ul#markdown-toc {
 		list-style-type: none;
 		border: solid 1px #ccc;
+		border-radius: 3px;
 		font-size: 18px;
 		padding: 15px 20px;
 		background: #fcfcfc;
