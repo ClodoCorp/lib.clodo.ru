@@ -326,6 +326,7 @@
 		border-bottom: solid 1px #ccc;
 		padding-bottom: 3px;
 		margin-bottom: 10px;
+		margin-top: 40px;
 	}
 	.innertube h6 {
 		color: #888;
@@ -339,9 +340,10 @@
 		margin-bottom: 10px;
 	}
 	.innertube p.tip {
-		border: solid 2px #f99;
+		border: solid 1px #f99;
 		background: #ffe7e7 url(/images/ktip.png) no-repeat;
 		padding: 20px 30px 20px 65px;
+		border-radius: 3px;
 	}
 	.innertube p.consol {
 		background: #122312;
