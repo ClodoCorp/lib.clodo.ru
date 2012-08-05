@@ -31,27 +31,27 @@ category: WEB-Сервер
 
 Для подключения этих репозиториев введите в консоли команды:
 
-	# для 32-битных ОС  
-	rpm -ihv http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm  
-	rpm -ihv http://centos.alt.ru/repository/centos/5/i386/centalt-release-5-3.noarch.rpm  
+    # для 32-битных ОС  
+    rpm -ihv http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm  
+    rpm -ihv http://centos.alt.ru/repository/centos/5/i386/centalt-release-5-3.noarch.rpm  
 
-	# для 64-битных ОС  
-	rpm -ihv http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm  
-	rpm -ihv http://centos.alt.ru/repository/centos/5/x86_64/centalt-release-5-3.noarch.rpm
+    # для 64-битных ОС  
+    rpm -ihv http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm  
+    rpm -ihv http://centos.alt.ru/repository/centos/5/x86_64/centalt-release-5-3.noarch.rpm
 
 Далее, выполните команду установки пакета nginx:
 
-	yum install nginx
+    yum install nginx
 
 В большинстве случаев требуется, чтобы nginx загружался автоматически при запуске сервера. Для этого выполните следующую команду:
 
-	chkconfig nginx on
+    chkconfig nginx on
 
 ### Debian/Ubuntu
 
 Для установки пакета в ОС Debian или Ubuntu достаточно выполнить команду в консоли:
 
-	apt-get install nginx
+    apt-get install nginx
 
 Nginx автоматически будет добавлен в автозагрузку при запуске сервера.
 
@@ -63,48 +63,52 @@ Nginx автоматически будет добавлен в автозагр
 
 Наш конфиг файл должен выглядеть примерно так:
 
-	user www-data;
-	error_log /var/log/nginx/error.log debug; 
-	pid /var/run/nginx.pid;
-	worker_rlimit_nofile 80000;
+    user www-data;
+    error_log /var/log/nginx/error.log debug; 
+    pid /var/run/nginx.pid;
+    worker_rlimit_nofile 80000;
 
-	events {
-		worker_connections 2048;
-	}
+    events {
+      worker_connections 2048;
+    }
 
-	http {
-		include /etc/nginx/mime.types;
-		default_type application/octet-stream;
-		log_format main ‘$remote_addr – $remote_user [$time_local] $status ‘
-		‘»$request» $body_bytes_sent «$http_referer» ‘
-		‘»$http_user_agent» «http_x_forwarded_for»‘;
-		access_log /var/log/nginx/access.log main;
+    http {
+      include /etc/nginx/mime.types;
+      default_type application/octet-stream;
+      log_format main ‘$remote_addr – $remote_user [$time_local] $status ‘
+      ‘»$request» $body_bytes_sent «$http_referer» ‘
+      ‘»$http_user_agent» «http_x_forwarded_for»‘;
+      access_log /var/log/nginx/access.log main;
 
-		server {
-			listen 		88.88.88.11:80; # 88.88.88.11 нужно заменить на IP Вашего сервера
-			server_name mysite.ru www.mysite.ru; # здесь и далее вместо mysite.ru указывается имя Вашего сайта
-			access_log 	/var/log/nginx/host.access.log main;
+      server {
+        listen    88.88.88.11:80; # 88.88.88.11 нужно заменить на IP Вашего сервера
+        # здесь и далее вместо mysite.ru указывается имя Вашего сайта
+        server_name mysite.ru www.mysite.ru; 
+        access_log  /var/log/nginx/host.access.log main;
 
-			server_name_in_redirect off;
+        server_name_in_redirect off;
 
-			# Секция ниже описывает параметры, по которых фронтенд обменевается с бэкендом,
-			#такие, как адрес бэкенда, параметры прямого редиректа, параметры передачи заголовков, максимальный размер принимаемых файлов и пр.
-			location / {
-				proxy_pass 			http://127.0.0.1:8080/;
-				proxy_redirect 		off;
-				proxy_set_header 	Host $host;
-				proxy_set_header 	X-Real-IP $remote_addr;
-				proxy_set_header 	X-Forwarded-For $proxy_add_x_forwarded_for;
-				client_max_body_size 10m;
-				proxy_connect_timeout 90;
-			}
+        # Секция ниже описывает параметры, по которых фронтенд обменевается с бэкендом,
+        # такие, как адрес бэкенда, параметры прямого редиректа, параметры передачи заголовков,
+        # максимальный размер принимаемых файлов и пр.
+        location / {
+          proxy_pass      http://127.0.0.1:8080/;
+          proxy_redirect    off;
+          proxy_set_header  Host $host;
+          proxy_set_header  X-Real-IP $remote_addr;
+          proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+          client_max_body_size 10m;
+          proxy_connect_timeout 90;
+        }
 
-			#Эта секция отвечает за местонахождение и типы статичных файлов, обрабатываемых Nginx. Динамические файлы мы будем отсылать на Apache
-			location ~* ^.+\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|rar|bz2|doc|xls|exe|pdf|ppt|txt|tar|wav|bmp|rtf|js)$ {
-				root /var/www/mysite.ru;
-			}
-		}
-	}
+        # Эта секция отвечает за местонахождение и типы статичных файлов, обрабатываемых Nginx.
+        # Вы можете добавить по аналогии расширения файлов, которые будут отдаваться Nginx'ом.
+        # Динамические файлы мы будем отсылать на Apache
+        location ~* ^.+\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|js)$ {
+          root /var/www/mysite.ru;
+        }
+      }
+    }
 
 
 
@@ -114,13 +118,13 @@ Nginx автоматически будет добавлен в автозагр
 
 В списке пакетов для CentOS Apache2 значится как httpd, потому необходимо выполнить следующую команду в консоли:
 
-	yum install httpd
+    yum install httpd
 
 ### Debian/Ubuntu
 
 Для Debian/Ubuntu установить Apache нужно командой:
 
-	apt-get install apache2
+    apt-get install apache2
 
 
 
@@ -132,18 +136,18 @@ Nginx автоматически будет добавлен в автозагр
 **Debian/Ubuntu:** /etc/apache2/apache2.conf  
 **CentOS:** /etc/httpd/conf/httpd.conf
 
-	Listen 127.0.0.1:8080
-	NameVirtualHost 127.0.0.1:8080
-
-	<VirtualHost 127.0.0.1:8080>
-	  # В строке ниже указывается адрес почтового ящика администратора сервера,
-	  # т. е. Ваш. Имя-пример "mysite.ru" здесь и далее необходимо заменить на имя Вашего сайта
-	  ServerAdmin webmaster@mysite.ru
-	  DocumentRoot /var/www/mysite.ru/
-	  ServerName mysite.ru
-	  ErrorLog logs/mysite.ru-error_log
-	  CustomLog logs/mysite.ru-access_log common
-	</VirtualHost>
+  >Listen 127.0.0.1:8080  
+  >NameVirtualHost 127.0.0.1:8080  
+  >  
+  ><VirtualHost 127.0.0.1:8080>  
+  >  # В строке ниже указывается адрес почтового ящика администратора сервера,  
+  >  # т. е. Ваш. Имя-пример "mysite.ru" здесь и далее необходимо заменить на имя Вашего сайта  
+  >  ServerAdmin webmaster@mysite.ru  
+  >  DocumentRoot /var/www/mysite.ru/  
+  >  ServerName mysite.ru  
+  >  ErrorLog logs/mysite.ru-error_log  
+  >  CustomLog logs/mysite.ru-access_log common  
+  ></VirtualHost>
 
 
 
@@ -155,14 +159,14 @@ Nginx автоматически будет добавлен в автозагр
 
 Установка в CentOS выполняется следующей командой:
 
-	yum install mod_rpaf
+    yum install mod_rpaf
 
 ### Debian/Ubuntu
 
 В Debian или Ubuntu установка и включение модуля RPAF в Apache выполняется следующими командами:
 
-	apt-get install libapache2-mod-rpaf
-	a2enmod rpaf
+    apt-get install libapache2-mod-rpaf
+    a2enmod rpaf
 
 
 
@@ -191,13 +195,13 @@ Nginx автоматически будет добавлен в автозагр
 
 Для CentOS выполните команды:
 
-	/etc/init.d/httpd restart
-	/etc/init.d/nginx restart
+    /etc/init.d/httpd restart
+    /etc/init.d/nginx restart
 
 Для Debian и Ubuntu команды будут следующие:
 
-	/etc/init.d/apache2 restart
-	/etc/init.d/nginx restart
+    /etc/init.d/apache2 restart
+    /etc/init.d/nginx restart
 
 
 
