@@ -8,7 +8,7 @@ def category_links
 		"Первые шаги"			=> "getting-started",
 		"Используем Linux"		=> "linux",
 		"Популярные CMS"		=> "cms",
-		"Web Server"			=> "web-server",
+		"WEB-Сервер"			=> "web-server",
 		"Email"					=> "email",
 		"Безопасность"			=> "linux-security",
 		"Сеть"					=> "network",

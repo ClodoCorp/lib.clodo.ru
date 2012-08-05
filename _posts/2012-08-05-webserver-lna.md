@@ -26,13 +26,18 @@ category: WEB-Сервер
 ## Установка nginx
 
 ### CentOS
-Для того, чтобы установить Nginx, нам понадобится репозиторий EPEL. В принципе, данный пакет есть и в основном репозитории CentOS, но в EPEL пакет собран с ключом enable_rpaf, дающим возможность посредством rpaf-модуля взаимодействовать нашей будущей связке. Чтобы подключить EPEL, введем в консоли:
+
+Для начала нам необходимо подключить репозитории EPEL и CentALT. Это нужно для того, чтобы мы смогли установить Nginx с поддержкой модуля RPAF и сам модуль для Apache.
+
+Для подключения этих репозиториев введите в консоли команды:
 
 	# для 32-битных ОС  
 	rpm -ihv http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm  
+	rpm -ihv http://centos.alt.ru/repository/centos/5/i386/centalt-release-5-3.noarch.rpm  
 
 	# для 64-битных ОС  
-	rpm -ihv http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
+	rpm -ihv http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm  
+	rpm -ihv http://centos.alt.ru/repository/centos/5/x86_64/centalt-release-5-3.noarch.rpm
 
 Далее, выполните команду установки пакета nginx:
 
@@ -54,7 +59,9 @@ Nginx автоматически будет добавлен в автозагр
 
 ## Конфигурация Nginx
 
-Следующий этап - изменение файла конфигурации Nginx. Наш конфиг файл должен выглядеть примерно так:
+Следующий этап - изменение файла конфигурации Nginx. Путь к файлу конфигурации: `/etc/nginx/nginx.conf`
+
+Наш конфиг файл должен выглядеть примерно так:
 
 	user www-data;
 	error_log /var/log/nginx/error.log debug; 
@@ -109,7 +116,7 @@ Nginx автоматически будет добавлен в автозагр
 
 	yum install httpd
 
-### Debian
+### Debian/Ubuntu
 
 Для Debian/Ubuntu установить Apache нужно командой:
 
@@ -119,14 +126,83 @@ Nginx автоматически будет добавлен в автозагр
 
 ## Конфигурация Apache
 
+Приводим соответствующую часть файла конфигурации Apache к такому виду:
+
+Файл конфигурации располагается:  
+**Debian/Ubuntu:** /etc/apache2/apache2.conf  
+**CentOS:** /etc/httpd/conf/httpd.conf
+
+	Listen 127.0.0.1:8080
+	NameVirtualHost 127.0.0.1:8080
+
+	<VirtualHost 127.0.0.1:8080>
+	  # В строке ниже указывается адрес почтового ящика администратора сервера,
+	  # т. е. Ваш. Имя-пример "mysite.ru" здесь и далее необходимо заменить на имя Вашего сайта
+	  ServerAdmin webmaster@mysite.ru
+	  DocumentRoot /var/www/mysite.ru/
+	  ServerName mysite.ru
+	  ErrorLog logs/mysite.ru-error_log
+	  CustomLog logs/mysite.ru-access_log common
+	</VirtualHost>
 
 
 
+## Установка модуля RPAF
+
+Т.к. теперь все запросы к Apache приходят не от удалённых клиентов, а от Nginx, то в итоге IP-адрес клиента Apache определяет как локальный (127.0.0.1). Для решения этой проблемы нам нужен модуль RPAF. Он берет тело заголовка X-Forwarded-For, присланного от фронтенда (Nginx) и заменяет значение заголовка REMOTE_ADDR на бекенде (Apache).
+
+### CentOS
+
+Установка в CentOS выполняется следующей командой:
+
+	yum install mod_rpaf
+
+### Debian/Ubuntu
+
+В Debian или Ubuntu установка и включение модуля RPAF в Apache выполняется следующими командами:
+
+	apt-get install libapache2-mod-rpaf
+	a2enmod rpaf
 
 
 
+## Настройка модуля RPAF
+
+Файл конфигурации RPAF находится:  
+**Debian/Ubuntu:** /etc/apache2/mods-enabled/rpaf.conf  
+**CentOS:** /etc/httpd/conf.d/rpaf.conf
+
+Он должен содержать следующие строки:
+
+> RPAFenable On  
+> RPAFsethostname Off  
+> RPAFproxy_ips 127.0.0.1  
+> RPAFheader X-Real-IP  
+
+Если у вас установлена ОС CentOS, то в начало этого файла обязательно добавьте строку:
+
+> LoadModule rpaf_module modules/mod_rpaf-2.0.so
 
 
 
+## Завершение настройки (перезапуск сервисов)
+
+На этом настройка связки закончена. Теперь нужно только перезапусть Apache и Nginx. Команды перезапуска сервисов различаются для ОС (из-за различий в названиях пакетов).
+
+Для CentOS выполните команды:
+
+	/etc/init.d/httpd restart
+	/etc/init.d/nginx restart
+
+Для Debian и Ubuntu команды будут следующие:
+
+	/etc/init.d/apache2 restart
+	/etc/init.d/nginx restart
 
 
+
+Теперь связка работает, Nginx обрабатывает статичные данные, Apache - динамические.
+
+Обращаем Ваше внимание, что данный пример настройки действителен только для одного хоста.  
+В случае наличия более чем одного сайта, содержимое файлов конфигурации будет отличаться.
+{:.tip}
