@@ -1154,6 +1154,10 @@
 		margin-left: 20px;
 		font-size: 14px;
 	}
+	div.category2item {
+		margin-bottom: 5px;
+		border-bottom: dotted 1px #ccc;
+	}
 	div.categorymenu {
 		border: solid 1px #ccc;
 		border-radius: 3px;
@@ -1161,6 +1165,9 @@
 		padding: 15px 20px 10px 20px;
 		background: #fcfcfc;
 		margin: 25px 0;
+	}
+	div.nobottomborder {
+		border-bottom: none;
 	}
 
 
