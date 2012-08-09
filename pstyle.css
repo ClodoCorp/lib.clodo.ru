@@ -1227,6 +1227,13 @@
 		background: #fcfcfc;
 		margin: 25px 0;
 	}
+	ul#markdown-toc ul {
+		list-style-type: none;
+		font-size: 15px;
+	}
+	ul#markdown-toc ul li {
+		margin-left: -15px;
+	}
 
 	.contentwrapper table tr {
 		border-right: 1px solid #999;
