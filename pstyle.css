@@ -1127,6 +1127,11 @@
 	table.table_vps_stat {
 		margin-top: 10px;
 	}
+
+	.innertube table {
+		background-color: #fdfdfd;
+		border-radius: 3px;
+	}
 	td.complete_task div {
 		text-decoration: line-through;
 	}
