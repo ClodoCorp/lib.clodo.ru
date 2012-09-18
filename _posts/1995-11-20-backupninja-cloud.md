@@ -1,11 +1,11 @@
 ---
 layout: article
-title: "Резервное копирование в облачное хранилище"
-description: "Настройка резервного копирования в облачное хранилище"
+title: "Создание резервной копии на Cloud Storage"
+description: "Backupninja"
 category: Облачное хранилище 
 ---
 
-
+## Создание резервной копии на Cloud Storage
 
 * Содержание
 {:toc}
@@ -50,12 +50,12 @@ Backupninja-cloud представляет собой плагин для ути
 
     ninjahelper
 	
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_001.png)
+![](/images/cloudstorage/backupninja/bn_cloud_001.png)
 
 
 Создание нового задания для резервного копирования начинается с выбора типа резервного копирования. В данном случае - csdup.
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_002.png)
+![](/images/cloudstorage/backupninja/bn_cloud_002.png)
 
 
 В главном меню создания задания необходимо пошагово указать все необходимые данные.
@@ -66,18 +66,18 @@ Backupninja-cloud представляет собой плагин для ути
 
 Здесь необходимо указать директории, которые будут загружены в хранилище
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_004.png)
+![](/images/cloudstorage/backupninja/bn_cloud_004.png)
 
 Exclude позволяет указать файлы, которые не будут включены в резервную копию
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_005.png)
+![](/images/cloudstorage/backupninja/bn_cloud_005.png)
 
 ###### __dest__ (destination) ######
 
 
 На данном этапе указываются для загрузки резервной копии в хранилище:
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_006.png)
+![](/images/cloudstorage/backupninja/bn_cloud_006.png)
 
 
 Параметры, __обязательные__ для заполнения для исправной работы системы резервного копирования:
@@ -120,11 +120,11 @@ increments
 
 Нажмите "Finish" чтобы создать задание
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_007.png)
+![](/images/cloudstorage/backupninja/bn_cloud_007.png)
 
 Теперь, в главном меню программы отобразится созданное задание:
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_008.png)
+![](/images/cloudstorage/backupninja/bn_cloud_008.png)
 
 Также, в дирекотрии /root/.restore/ будет создан файл с названием taskname.cstask, где taskname - это слово, которые было указано в пункте name. В данном файле хранится информация для восстановления файлов из резервной копии. Это можно сделать как на текщем сервере, так и на удаленном ПК, с установленным и настроенным ПО (duplicity, python-cloudfiles). Желательно создать резервную копию даннных файлов, т.к. в них содержится вся информация для автоматического восстановления данных.
 
@@ -134,18 +134,18 @@ increments
 
 Выберите задание из списка и откройте его, нажав "Enter". Теперь можно протестировать его выполнение в пределах текущего сервера (уточнить параметры для duplicity).
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_009.png)
+![](/images/cloudstorage/backupninja/bn_cloud_009.png)
 
 Обычно, с тестом проблем не возникает, и вы можете сраз перейти к проверке создания резервной копии в хранилище. Для этого нажмите "Run".
 
 Пример успешно отработанного задания:
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_010.png)
+![](/images/cloudstorage/backupninja/bn_cloud_010.png)
 
 
 Теперь, в панели управления хранилищем можно зайти в созданный контейнер и увидеть следующие файлы. Как уже говорилось ранее - данные хранятся в зашифрованном виде.
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_012.png)
+![](/images/cloudstorage/backupninja/bn_cloud_012.png)
 
 
 Восстановление файлов
@@ -161,7 +161,7 @@ increments
 
 Пример успешного выполнения скрипта:
 
-![](http://static.clodo.ru/lib-images/backupninja/bn_cloud_011.png)
+![](/images/cloudstorage/backupninja/bn_cloud_011.png)
 
 В /var/restored появится директория root со всем данными.
 
