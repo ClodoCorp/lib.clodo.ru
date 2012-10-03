@@ -3,6 +3,7 @@ layout: article
 title: "Тестовая статья"
 description: "Синтаксис статей в базу знаний"
 category: Тестовая категория
+published: false
 ---
 
 * t
