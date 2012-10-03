@@ -47,7 +47,7 @@
 		<div class="header"></div>
 		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
 			<tr>
-				<td rowspan="2" class="logo"><a href="/"><img src="http://lib.clodo.ru/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
 				<td rowspan="2" class="slog">
 					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
 				</td>
@@ -91,14 +91,17 @@
 
 						{% for cat in site.categories %}
 							{% capture current %}{{ cat | first }}{% endcapture %}
-							<div class="category1item"><a href="/{{ current | catname2link }}/">{{ current }}</a></div>
+							
 
 							{% if current == page.category %}
+								<div class="category1item nobottomborder"><a href="/{{ current | catname2link }}/">{{ current }}</a></div>
 								<div class="category2item">
 									{% for post in cat[1] %}
 											<div class="category1item"><a href="{{ post.url }}">{{ post.title }}</a></div>
 									{% endfor %}
 								</div>
+							{% else %}
+								<div class="category1item"><a href="/{{ current | catname2link }}/">{{ current }}</a></div>
 							{% endif %}
 						{% endfor %}
 							

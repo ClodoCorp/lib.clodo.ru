@@ -1,6 +1,6 @@
 ---
 title: Exim
-description: "Установка и настройка Exim для отправки почты"
+description: "Установка и настройка Exim для отправки почты на Debian/Ubuntu"
 layout: article
 category: Email
 ---
