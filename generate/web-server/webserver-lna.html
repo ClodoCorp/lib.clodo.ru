@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Nginx + Apache</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/CMS/">CMS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/web-server/">WEB-Сервер</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/web-server/webserver-lna.html">Nginx + Apache</a></div>
+									
+											<div class="category1item"><a href="/web-server/LAMP.html">LAMP</a></div>
+									
+								</div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/network/">Сеть</a></div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/web-server">WEB-Сервер</a> :: 
+	Nginx + Apache
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Установка и настройка связки Nginx+Apache</h1>
+
+<!-- ARTICLE _ START -->
+<p>Связка двух веб-серверов, один из которых выполняет функцию фонтенда (Nginx), другой - бэкенда (Apache2), предназначена для снижения общей нагрузки на сервер. Достигается это за счет того, что более легкий и не обремененный дополнительным функционалом Nginx первым принимает все запросы пользователей. Он самостоятельно выдает по запросам статический контент (изображения, html-файлы, javascript-скрипты..), не озадачивая этой функцией тяжеловесный Apache, который, в свою очередь, обрабатывает динамический контент. Apache не работает напрямую с пользователем, все их запросы проксируются Nginx, и ему же возвращаются ответы. Так достигается разделение труда: Nginx освобождает Apache от необходимости “общаться” с множеством пользователей и обрабатывать запросы на статику, которая составляет большую часть исходящего трафика. Apache не создает множества дочерних процессов, потребляющих оперативную память.</p>
+
+<p>Данная связка часто применяется для обеспечения работы крупных ресурсов с большой посещаемостью. Для ресурсов с маленькой посещаемостью такая связка не даст ощутимого прироста производительности.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#nginx">Установка nginx</a>    <ul>
+      <li><a href="#centos">CentOS</a></li>
+      <li><a href="#debianubuntu">Debian/Ubuntu</a></li>
+    </ul>
+  </li>
+  <li><a href="#nginx-1">Конфигурация Nginx</a></li>
+  <li><a href="#apache2">Установка Apache2</a>    <ul>
+      <li><a href="#centos-1">CentOS</a></li>
+      <li><a href="#debianubuntu-1">Debian/Ubuntu</a></li>
+    </ul>
+  </li>
+  <li><a href="#apache">Конфигурация Apache</a></li>
+  <li><a href="#rpaf">Установка модуля RPAF</a>    <ul>
+      <li><a href="#centos-2">CentOS</a></li>
+      <li><a href="#debianubuntu-2">Debian/Ubuntu</a></li>
+    </ul>
+  </li>
+  <li><a href="#rpaf-1">Настройка модуля RPAF</a></li>
+  <li><a href="#section">Завершение настройки (перезапуск сервисов)</a></li>
+</ul>
+
+<p>Если Вы являетесь пользователем ISPmanager, нижеизложенная информация пригодится Вам лишь для ознакомления. Его функционал позволяет создать такую связку достаточно быстро и без манипуляции с командной строкой.</p>
+
+<p>Данная статья была протестирована на CentOS 5 и Debian Squeeze. Связка работает в том же виде и на других дистрибутивах, но по причине наибольшей популярности первых, мы будем говорить именно о них. Основная часть данной статьи посвящена CentOS, но различия с Debian заключаются только в названиях пакетных менеджеров и нескольких незначительных моментах. Все особенности установки для Debian описаны в заключительной части данной статьи. Команды и примеры файлов конфигурации, не указанные в этом разделе, подходят для обеих систем.</p>
+
+<h2 id="nginx">Установка nginx</h2>
+
+<h3 id="centos">CentOS</h3>
+
+<p>Для начала нам необходимо подключить репозитории EPEL и CentALT. Это нужно для того, чтобы мы смогли установить Nginx с поддержкой модуля RPAF и сам модуль для Apache.</p>
+
+<p>Для подключения этих репозиториев введите в консоли команды:</p>
+
+<pre><code># для 32-битных ОС  
+rpm -ihv http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm  
+rpm -ihv http://centos.alt.ru/repository/centos/5/i386/centalt-release-5-3.noarch.rpm  
+
+# для 64-битных ОС  
+rpm -ihv http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm  
+rpm -ihv http://centos.alt.ru/repository/centos/5/x86_64/centalt-release-5-3.noarch.rpm
+</code></pre>
+
+<p>Далее, выполните команду установки пакета nginx:</p>
+
+<pre><code>yum install nginx
+</code></pre>
+
+<p>В большинстве случаев требуется, чтобы nginx загружался автоматически при запуске сервера. Для этого выполните следующую команду:</p>
+
+<pre><code>chkconfig nginx on
+</code></pre>
+
+<h3 id="debianubuntu">Debian/Ubuntu</h3>
+
+<p>Для установки пакета в ОС Debian или Ubuntu достаточно выполнить команду в консоли:</p>
+
+<pre><code>apt-get install nginx
+</code></pre>
+
+<p>Nginx автоматически будет добавлен в автозагрузку при запуске сервера.</p>
+
+<h2 id="nginx-1">Конфигурация Nginx</h2>
+
+<p>Следующий этап - изменение файла конфигурации Nginx. Путь к файлу конфигурации: <code>/etc/nginx/nginx.conf</code></p>
+
+<p>Наш конфиг файл должен выглядеть примерно так:</p>
+
+<pre><code>user www-data;
+error_log /var/log/nginx/error.log debug; 
+pid /var/run/nginx.pid;
+worker_rlimit_nofile 80000;
+
+events {
+  worker_connections 2048;
+}
+
+http {
+  include /etc/nginx/mime.types;
+  default_type application/octet-stream;
+  log_format main ‘$remote_addr – $remote_user [$time_local] $status ‘
+  ‘»$request» $body_bytes_sent «$http_referer» ‘
+  ‘»$http_user_agent» «http_x_forwarded_for»‘;
+  access_log /var/log/nginx/access.log main;
+
+  server {
+    listen    88.88.88.11:80; # 88.88.88.11 нужно заменить на IP Вашего сервера
+    # здесь и далее вместо mysite.ru указывается имя Вашего сайта
+    server_name mysite.ru www.mysite.ru; 
+    access_log  /var/log/nginx/host.access.log main;
+
+    server_name_in_redirect off;
+
+    # Секция ниже описывает параметры, по которых фронтенд обменевается с бэкендом,
+    # такие, как адрес бэкенда, параметры прямого редиректа, параметры передачи заголовков,
+    # максимальный размер принимаемых файлов и пр.
+    location / {
+      proxy_pass      http://127.0.0.1:8080/;
+      proxy_redirect    off;
+      proxy_set_header  Host $host;
+      proxy_set_header  X-Real-IP $remote_addr;
+      proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+      client_max_body_size 10m;
+      proxy_connect_timeout 90;
+    }
+
+    # Эта секция отвечает за местонахождение и типы статичных файлов, обрабатываемых Nginx.
+    # Вы можете добавить по аналогии расширения файлов, которые будут отдаваться Nginx'ом.
+    # Динамические файлы мы будем отсылать на Apache
+    location ~* ^.+\.(jpg|jpeg|gif|png|ico|css|zip|tgz|gz|js)$ {
+      root /var/www/mysite.ru;
+    }
+  }
+}
+</code></pre>
+
+<h2 id="apache2">Установка Apache2</h2>
+
+<h3 id="centos-1">CentOS</h3>
+
+<p>В списке пакетов для CentOS Apache2 значится как httpd, потому необходимо выполнить следующую команду в консоли:</p>
+
+<pre><code>yum install httpd
+</code></pre>
+
+<h3 id="debianubuntu-1">Debian/Ubuntu</h3>
+
+<p>Для Debian/Ubuntu установить Apache нужно командой:</p>
+
+<pre><code>apt-get install apache2
+</code></pre>
+
+<h2 id="apache">Конфигурация Apache</h2>
+
+<p>Приводим соответствующую часть файла конфигурации Apache к такому виду:</p>
+
+<p>Файл конфигурации располагается:<br />
+<strong>Debian/Ubuntu:</strong> /etc/apache2/apache2.conf<br />
+<strong>CentOS:</strong> /etc/httpd/conf/httpd.conf</p>
+
+<blockquote>
+  <p>Listen 127.0.0.1:8080<br />
+NameVirtualHost 127.0.0.1:8080  </p>
+
+  <p>&lt;VirtualHost 127.0.0.1:8080&gt;<br />
+ # В строке ниже указывается адрес почтового ящика администратора сервера,<br />
+ # т. е. Ваш. Имя-пример “mysite.ru” здесь и далее необходимо заменить на имя Вашего сайта<br />
+ ServerAdmin webmaster@mysite.ru<br />
+ DocumentRoot /var/www/mysite.ru/<br />
+ ServerName mysite.ru<br />
+ ErrorLog logs/mysite.ru-error_log<br />
+ CustomLog logs/mysite.ru-access_log common<br />
+&lt;/VirtualHost&gt;</p>
+</blockquote>
+
+<h2 id="rpaf">Установка модуля RPAF</h2>
+
+<p>Т.к. теперь все запросы к Apache приходят не от удалённых клиентов, а от Nginx, то в итоге IP-адрес клиента Apache определяет как локальный (127.0.0.1). Для решения этой проблемы нам нужен модуль RPAF. Он берет тело заголовка X-Forwarded-For, присланного от фронтенда (Nginx) и заменяет значение заголовка REMOTE_ADDR на бекенде (Apache).</p>
+
+<h3 id="centos-2">CentOS</h3>
+
+<p>Установка в CentOS выполняется следующей командой:</p>
+
+<pre><code>yum install mod_rpaf
+</code></pre>
+
+<h3 id="debianubuntu-2">Debian/Ubuntu</h3>
+
+<p>В Debian или Ubuntu установка и включение модуля RPAF в Apache выполняется следующими командами:</p>
+
+<pre><code>apt-get install libapache2-mod-rpaf
+a2enmod rpaf
+</code></pre>
+
+<h2 id="rpaf-1">Настройка модуля RPAF</h2>
+
+<p>Файл конфигурации RPAF находится:<br />
+<strong>Debian/Ubuntu:</strong> /etc/apache2/mods-enabled/rpaf.conf<br />
+<strong>CentOS:</strong> /etc/httpd/conf.d/rpaf.conf</p>
+
+<p>Он должен содержать следующие строки:</p>
+
+<blockquote>
+  <p>RPAFenable On<br />
+RPAFsethostname Off<br />
+RPAFproxy_ips 127.0.0.1<br />
+RPAFheader X-Real-IP  </p>
+</blockquote>
+
+<p>Если у вас установлена ОС CentOS, то в начало этого файла обязательно добавьте строку:</p>
+
+<blockquote>
+  <p>LoadModule rpaf_module modules/mod_rpaf-2.0.so</p>
+</blockquote>
+
+<h2 id="section">Завершение настройки (перезапуск сервисов)</h2>
+
+<p>На этом настройка связки закончена. Теперь нужно только перезапусть Apache и Nginx. Команды перезапуска сервисов различаются для ОС (из-за различий в названиях пакетов).</p>
+
+<p>Для CentOS выполните команды:</p>
+
+<pre><code>/etc/init.d/httpd restart
+/etc/init.d/nginx restart
+</code></pre>
+
+<p>Для Debian и Ubuntu команды будут следующие:</p>
+
+<pre><code>/etc/init.d/apache2 restart
+/etc/init.d/nginx restart
+</code></pre>
+
+<p>Теперь связка работает, Nginx обрабатывает статичные данные, Apache - динамические.</p>
+
+<p class="tip">Обращаем Ваше внимание, что данный пример настройки действителен только для одного хоста.<br />
+В случае наличия более чем одного сайта, содержимое файлов конфигурации будет отличаться.</p>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

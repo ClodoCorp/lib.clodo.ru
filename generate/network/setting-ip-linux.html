@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Настройка IP Linux</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/CMS/">CMS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/web-server/">WEB-Сервер</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/network/">Сеть</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/network/setting-ip-linux.html">Настройка IP Linux</a></div>
+									
+											<div class="category1item"><a href="/network/setting-ip-windows.html">Настройка IP Windows</a></div>
+									
+											<div class="category1item"><a href="/network/own-ns.html">Свои NS-сервера</a></div>
+									
+								</div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/network">Сеть</a> :: 
+	Настройка IP Linux
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Настройка статического IP адреса в Linux</h1>
+
+<!-- ARTICLE _ START -->
+<p>Документ описывает процесс настройки дополнительного IP адреса в различных системах Linux.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#ip---debianubuntu">Настройка статического IP адреса в Debian/Ubuntu</a></li>
+  <li><a href="#ip---centosfedora">Настройка статического IP адреса в CentOS/Fedora</a></li>
+  <li><a href="#ip---gentoo">Настройка статического IP адреса в Gentoo</a></li>
+  <li><a href="#ip---arch-linux">Настройка статического IP адреса в Arch Linux</a></li>
+  <li><a href="#ip---opensuse">Настройка статического IP адреса в openSUSE</a></li>
+</ul>
+
+<h2 id="ip---debianubuntu">Настройка статического IP адреса в Debian/Ubuntu</h2>
+
+<p>После добавления дополнительного IP-адреса в панели управления ресурсами, необходимо отредактировать файл /etc/network/interfaces</p>
+
+<p>Редактируем файл /etc/network/interfaces и добавляем в конец строки:</p>
+
+<pre><code>auto eth0:0
+iface eth0:0 inet static
+address требуемый айпи-адрес
+netmask 255.255.0.0
+</code></pre>
+
+<p>После редактирования файла конфигурации необходимо выполнить команду:</p>
+
+<pre><code>/etc/init.d/networking restart
+</code></pre>
+
+<h2 id="ip---centosfedora">Настройка статического IP адреса в CentOS/Fedora</h2>
+
+<p>Для начала настройки дополнительного IP-адреса, выполните следующую команду:</p>
+
+<pre><code>cp /etc/sysconfig/network-scripts/ifcfg-eth0 /etc/sysconfig/network-scripts/ifcfg-eth0:0
+</code></pre>
+
+<p>После этого нужно изменить строку, начинающуюся с IPADDR и привести ее к виду:</p>
+
+<p>Редактируем файл /etc/sysconfig/network-scripts/ifcfg-eth0:0</p>
+
+<pre><code>IPADDR=требуемый IP-адрес
+</code></pre>
+
+<p>В этом же файле параметр DEVICE надо изменить на следующий:</p>
+
+<pre><code>DEVICE=eth0:0
+</code></pre>
+
+<p>После изменения файла конфигурации выполните команду:</p>
+
+<pre><code>service network restart
+</code></pre>
+
+<h2 id="ip---gentoo">Настройка статического IP адреса в Gentoo</h2>
+
+<p>Для настройки нового статического IP-адреса, найдите в файле /etc/conf.d/net строчку:</p>
+
+<pre><code>config_eth0=(
+</code></pre>
+
+<p>В секции начинающейся с указанной выше строки уже содержится настройка основного IP-адреса виртуального сервера. После уже существующей записи добавить новую запись:</p>
+
+<pre><code>ip-address netmask 255.255.0.0
+</code></pre>
+
+<p>После сохранения файла конфигурации выполните команду:</p>
+
+<pre><code>/etc/init.d/net.eth0 restart
+</code></pre>
+
+<h2 id="ip---arch-linux">Настройка статического IP адреса в Arch Linux</h2>
+
+<p>Для настройки дополнительного IP-адреса в Arch Linux, необходимо изменить файл /etc/rc.conf. После строки, начинающейся с eth0= добавить новую:</p>
+
+<pre><code>eth0_0="eth0:0 ip-address netmask 255.255.0.0"
+</code></pre>
+
+<p>Далее найти строку, начинающуюся с INTERFACES и добавить в нее после eth0 новый интерфейс eth0_0:</p>
+
+<pre><code>INTERFACES=(lo eth0 eth0_0)
+</code></pre>
+
+<h2 id="ip---opensuse">Настройка статического IP адреса в openSUSE</h2>
+
+<p>Для настройки дополнительного IP-адреса, необходимо в файл /etc/sysconfig/network/ifcfg-eth0 добавить строчки:</p>
+
+<pre><code>IPADDR_1=требуемый айпи-адрес
+NETMASK_1=255.255.0.0
+LABEL_1='0'
+</code></pre>
+
+<p>После чего выполнить команду</p>
+
+<pre><code>/etc/init.d/network restart
+</code></pre>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

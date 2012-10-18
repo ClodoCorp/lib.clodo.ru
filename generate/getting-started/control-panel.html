@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Управление сервером</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+</head>
+
+<body>
+
+
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				<!--
+					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
+				-->
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/getting-started/">Первые шаги</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/getting-started/creating-vps.html">Создание VPS</a></div>
+									
+											<div class="category1item"><a href="/getting-started/control-panel.html">Управление сервером</a></div>
+									
+											<div class="category1item"><a href="/getting-started/reinstall-os.html">Переустановка ОС</a></div>
+									
+											<div class="category1item"><a href="/getting-started/connect-via-ssh.html">Подключение по SSH/SFTP</a></div>
+									
+											<div class="category1item"><a href="/getting-started/connect-via-ftp.html">Подключение к VPS по FTP</a></div>
+									
+											<div class="category1item"><a href="/getting-started/security-updates.html">Установка обновлений безопасности</a></div>
+									
+											<div class="category1item"><a href="/getting-started/timezone-set.html">Настройка часового пояса</a></div>
+									
+											<div class="category1item"><a href="/getting-started/hosts-file.html">Проверка сайта без делегации домена</a></div>
+									
+								</div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/CMS/">CMS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/web-server/">WEB-Сервер</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/network/">Сеть</a></div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/getting-started">Первые шаги</a> :: 
+	Управление сервером
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Управление виртуальным сервером через панель управления.</h1>
+
+<!-- ARTICLE _ START -->
+<p>В этом разделе содержится документация по использованию панели управления Clodo.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#section">Основные элементы панели управления</a></li>
+  <li><a href="#section-1">Информация</a></li>
+  <li><a href="#section-2">Конфигурация</a></li>
+  <li><a href="#section-3">Статистика сервера</a></li>
+  <li><a href="#vnc-">VNC консоль</a></li>
+  <li><a href="#section-4">Резервные копии</a></li>
+</ul>
+
+<h2 id="section">Основные элементы панели управления</h2>
+
+<p>Панель управления ресурсами Clodo.ru находится по адресу <a href="https://panel.clodo.ru">https://panel.clodo.ru</a>. После авторизации Вы попадаете на главную страницу панели - список ресурсов. Если у Вас уже есть виртуальные сервера, то главная страница панели выглядит так:</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/clodo_panel.png" alt="" /></p>
+
+<p>Первый элемент панели управления - навигация. Навигация служит для перехода по разделам панели управления ресурсами. В этой статье будет рассматриваться раздел “CloudServer”.</p>
+
+<p>В разделе номер два представлен список ваших серверов. Операция включения VPS (1 - на скриншоте ниже) доступнa при нажатии на кнопку “Управление”. Порядок VPS в списке можно настраивать с помощью стрелки над кнопкой “Управление”.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/start_vps.png" alt="" /></p>
+
+<p>Если VPS включена, то при нажатии на кнопку “Управление” буду доступны действия “Перезагрузить” (1) и “Выключить” (2). Так же по нажатию на это кнопку вы можете удалить существующий виртуальный сервер. Удаление является необратимой операцией. Вместе с удалением виртуального сервера будут удалены все резервные копии, которые создавались для этого сервера.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/reboot_start_vps.png" alt="" /></p>
+
+<p class="tip">Заметим, во время выключения, включения и перезагрузки вы не можете совершать действия с сервером. Обычно в таких случаях выводится предупреждение “Действия временно недоступны”</p>
+
+<p>Процесс создания VPS подробно рассмотрен в <a href="../..//getting-started/creation.html">этой статье</a>. Если присмотреться к ID виртуального сервера, можно заметить, что он состоит из двух групп цифр. Первая обозначает номер вашего аккаунта, вторая порядковый номер виртуального сервера на нём.</p>
+
+<p>Третий элемент панели управления содержит набор инструментов, позволяющих получать информацию о виртуальном сервере и производить управление каждым виртуальным сервером из второго раздела. Сейчас мы более подробно рассмотрим каждую из вкладок.</p>
+
+<h2 id="section-1">Информация</h2>
+
+<p>Общая информация о VPS. Она содержит данные, необходимые для подключения к серверу. В частности, его ip адрес, vnc-ip адрес(ip адрес и порт для подключения посредством VNC), а также пароль пользователя root. В случае утери пароля root его можно изменить прямо из панели управления нажав для этого ссылку “Изменить” рядом с “Root Password”.</p>
+
+<p>Для Virtual серверов есть такой параметр, как автопродление. Если оно отключено, оплата VPS не будет производиться автоматически по истечении прошлого периода оплаты, даже если на счету есть средства. В этом случае виртуальный сервер будет удалён после окончания последнего срока оплаты.</p>
+
+<p>В разделе “Стоимость аренды и обслуживания” (обозначеные цифрой 4 на первом скриншоте) есть подробные пояснения для каждой цифры. Получить их можно нажав на значок “?”. Помимо стоимости ресурсов VPS здесь отображается текущий тарифный план технической поддержки и количество подключенных дополнительных ip адресов. Поменять эти параметры можно тут же. Лог работы виртуального сервера показывает, какие действия и когда совершались с сервером.</p>
+
+<h2 id="section-2">Конфигурация</h2>
+
+<p><img src="http://static.clodo.ru//lib-images/clodo_panel/panel_server_config.png" alt="" /></p>
+
+<p>Слева находится кнопка “расширенные настройки”(1). Функция данного подраздела - дать возможность произвести тонкую настройку параметров сервера. В частности, можно задать объём swap-диска, включить/выключить шейпер дисковых операций, указать дневной лимит расхода CPU и RAM. На скриншоте номером два обозначена кнопка конвертации типа виртуального сервера. Она позволяет изменять тип со Scale на Virtual и обратно. Такое изменение типа доступно не чаще раза в сутки. Кнопка справа от неё(3) переустанавливает операционную систему на VPS. Будьте внимательны, при переустановке теряются все данные.</p>
+
+<p>Теперь нажмите на кнопку “расширенные настройки”. Вы увидите, как развернется меню настроек сервера. Если Вы хотите установить панель IspManager, выберите её тип(lite или pro) в этом меню</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_isp.png" alt="" /></p>
+
+<p>и нажмите “Сохранить изменения” внизу страницы. Потом установите IspManager по этой несложной инструкции(раздел “установка стандартным способом”).</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_ram_advanced.png" alt="" /></p>
+
+<p>Для Scale-серверов этот раздел выглядит так:</p>
+
+<ol>
+  <li>Нижняя граница выделения оперативной памяти для Scale-серверов.</li>
+  <li>Верхняя граница выделения оперативной памяти для Scale-серверов.</li>
+  <li>Размер блока памяти для масштабирования. Параметр определяет какими блоками будет выделяться оперативная память.</li>
+  <li>Минимальная разница между выделяемой и используемой памятью - устанавливает запас оперативной памяти, который всегда будет держаться свободным.</li>
+  <li>Интервал опроса.</li>
+</ol>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_hdd_advanced.png" alt="" /></p>
+
+<p>Здесь можно изменять
+1. Объём дискового хранилища
+2. Объём swap-диска
+3. Работу шейпера дисковых операций.
+Смотрите пояснения в панели управления. Стоит заметить, что доступный размер HDD зависит от установленного в данный момент значения RAM. Если по какой-то причине нужно больше места, но вариант увеличения RAM не рассматривается, Вам просто необходимо ознакомиться с разделом, посвященным <a href="../../cloud-storage/">Cloud Storage</a>.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_traff.png" alt="" /></p>
+
+<p>В этом разделе можно купить пакеты трафика. Подробно о тарификации трафика на хостинге clodo.ru рассказано в <a href="../../clodo/traffic.html">соответствующей статье</a>.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_add_ip.png" alt="" /></p>
+
+<p>На каждые 256 мегабайт оперативной памяти возможно приобретение 2 дополнительных ip адресов. О добавлении ip внутри системы рассказано <a href="../../ipconfig-linux.html">здесь</a>.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_support.png" alt="" /></p>
+
+<p>В этом подразделе выбирается тип технической поддержки. Подробное описание можно получить, выбрав интересующий вас тип.</p>
+
+<p>В самом низу странички с настройками находится раздел, где указан прогноз стоимости выбранных ресурсов и задаётся дневной лимит расхода денежных средств для Scale-серверов. По умолчанию лимит не установлен.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_forecast.png" alt="" /></p>
+
+<p class="tip">Внимание! Для того, чтобы изменения из раздела “Конфигурация” вступили в силу, нужно нажать на кнопку “Сохранить изменения”. Для вступления в силу некоторых изменений требуется перезагрузка. Обращайте внимание на предупреждения в панели.</p>
+
+<h2 id="section-3">Статистика сервера</h2>
+
+<p>Статика отображается за 6, 24 часа, за неделю и за месяц; требуемый период можно выбрать. Из первого раздела можно узнать о таких параметрах работы vps как время непрерывной работы(uptime), дата создания, расход ресурсов. Во втором представлена графическая интерпретация расхода ресурсов RAM, CPU, HDD и трафика.</p>
+
+<p><img src="http://static.clodo.ru/lib-images/clodo_panel/panel_statistic_vps.png" alt="" /></p>
+
+<p>Для scale-серверов на графике CPU отображается процент использования 14 ядер(т.к. доступны все 14). Для Virtual количество доступных ядер меняется в зависимости от объёма выделяемой оперативной памяти. Трафик измеряется в килобайтах раз в минуту. Красная линия на графике RAM показывает, сколько оперативной памяти было выделено, зелёная - сколько потребляла система.</p>
+
+<h2 id="vnc-">VNC консоль</h2>
+
+<p>Virtual Network Computing - система удаленного доступа к рабочему столу, использующая протокол RFB. Обратите внимание, консоль может быть открыта в один момент времени только с одного компьютера.</p>
+
+<h2 id="section-4">Резервные копии</h2>
+
+<p>Для начала работы с резервными копиями, перейдите на вкладку “Резервные копии”, и нажмите на кнопку “Создать новую резервную копию”. При создании копии работа сервера не прекращается. Если сервер включен, то он будет продолжать работать. Как только резервная копия будет создана, вы сможете совершать с ней следующие действия:</p>
+
+<ol>
+  <li>Восстановление - откат до созданной резервной копии. При восстановлении из резервной копии, ваш сервер будет перезагружен.</li>
+  <li>Обновление текущей резервной копии.</li>
+  <li>Удаление резервной копии.</li>
+</ol>
+
+<p><img src="http://static.clodo.ru/lib-images/backingup/backup-panel.png" alt="" /></p>
+
+<p>Также, вам доступна настройка расписания обновления копии, в которой вы можете указать точное время и дни для данного действия. Для указания расписания нажмите на кнопку “Изменить” в соответствующей графе (4).</p>
+
+<p><img src="http://static.clodo.ru/lib-images/backingup/backup-shedule.png" alt="" /></p>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>
