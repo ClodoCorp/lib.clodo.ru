@@ -36,6 +36,16 @@
 		}
 		</style>
 	<![endif]-->
+
+	<!-- GOOGLE SEARCH -->
+	<script>
+	  (function() {
+	    var cx = '005661710072474951780:6ywyu3asnyk';
+	    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
 </head>
 
 <body>
@@ -52,9 +62,13 @@
 					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
 				</td>
 				<td class="user" align="right">
-				<!--
-					<form action="/search/" method="get" enctype="multipart/form-data"><font style="font-size: 14px;">Поиск по базе знаний</font> <input type="text" size="50" name="search" value=""><input type="submit" id="do" value="Искать" title="Search"></form>
-				-->
+				
+				<!-- GOOGLE SEARCH BOX -->
+				<div class='searchbox'>
+					<gcse:searchbox-only newWindow="false" enableAutoComplete='true'></gcse:searchbox-only>
+				</div>
+				<!-- /GOOGLE SEARCH BOX -->
+				
 				</td> 
 			</tr>
 			<tr>

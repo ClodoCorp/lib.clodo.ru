@@ -146,6 +146,11 @@
         z-index: 100;
         position: relative;
 	}
+	.searchbox {
+		/* border: 1px dashed #f0f; */
+		width: 479px;
+		padding-top: 8px;
+	}
 	table.header {
         position: relative;
         background: url(/images/header.png) no-repeat center;
@@ -314,6 +319,21 @@
 		font-size: 14px;
 		line-height: 22px;
 	}
+
+/* GOOGLE SEARCH FIXES */
+.innertube .gsc-control-cse {
+
+}
+.innertube .gsc-control-cse img {
+	box-shadow: none;
+	padding: 0;
+}
+.innertube .gsc-control-cse table td {
+	padding: none;
+	border-bottom: none;
+	vertical-align: middle;
+}
+
 	.innertube h1,.innertube h2,.innertube h3,.innertube h4 {
 		font-family: "Trebuchet MS", Helvetica, sans-serif;
 	}
