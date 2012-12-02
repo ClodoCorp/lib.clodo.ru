@@ -8,7 +8,7 @@
       <Label name="_cse_exclude_6ywyu3asnyk" mode="ELIMINATE" />
     </BackgroundLabels>
   </Context>
-  <LookAndFeel code="4" resultsurl="http://localhost:4000/search.html" nonprofit="false" googlebranding="watermark" element_layout="4" theme="7" custom_theme="true" text_font="Arial, sans-serif" url_length="full" enable_cse_thumbnail="false" promotion_url_length="full" ads_layout="1">
+  <LookAndFeel code="4" resultsurl="http://lib.clodo.ru/search.html" nonprofit="false" googlebranding="watermark" element_layout="4" theme="7" custom_theme="true" text_font="Arial, sans-serif" url_length="full" enable_cse_thumbnail="false" promotion_url_length="full" ads_layout="1">
     <Logo />
     <Colors url="#FF8C00" background="#FFFFFF" border="#FFFFFF" title="#006699" text="#000000" visited="#006699" title_hover="#CC0000" title_active="#1155CC" />
     <Promotions title_color="#006699" title_visited_color="#006699" url_color="#006699" background_color="#F6F6F6" border_color="#F6F6F6" snippet_color="#333333" title_hover_color="#1155CC" title_active_color="#1155CC" />
