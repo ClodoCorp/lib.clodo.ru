@@ -44,5 +44,5 @@ category: Панели управления VPS
 
 
   [1]: http://clodo.ru "Облачный хостинг Clodo"
-  [2]: /getting-started/connect-via-ftp.html "Подключение к серверу по SSH"
+  [2]: /getting-started/connect-via-ssh.html "Подключение к серверу по SSH"
   [3]: https://panel.clodo.ru "Панель управления Clodo.ru"
