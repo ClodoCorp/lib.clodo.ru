@@ -1,0 +1,693 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>UMI под OS Debian</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+
+	<!-- GOOGLE SEARCH -->
+	<script>
+	  (function() {
+	    var cx = '005661710072474951780:6ywyu3asnyk';
+	    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+</head>
+
+<body>
+
+<!-- test -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				
+				<!-- GOOGLE SEARCH BOX -->
+				<div class='searchbox'>
+					<gcse:searchbox-only newWindow="false" enableAutoComplete='true'></gcse:searchbox-only>
+				</div>
+				<!-- /GOOGLE SEARCH BOX -->
+				
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/CMS/">CMS</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/CMS/bitrix-os-debian.html">Bitrix под OS Debian</a></div>
+									
+											<div class="category1item"><a href="/CMS/umicms-os-debian.html">UMI под OS Debian</a></div>
+									
+								</div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/web-server/">WEB-Сервер</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/network/">Сеть</a></div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/CMS/">CMS</a> :: 
+	UMI под OS Debian
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Оптимизация UMI.CMS под OS Debian на облачном сервере Clodo (требует доработки)</h1>
+
+<!-- ARTICLE _ START -->
+<ul id="markdown-toc">
+  <li><a href="#section">Требуемое ПО</a></li>
+  <li><a href="#section-1">Лирическое отступление про различные связки ПО и скорость работы</a></li>
+  <li><a href="#section-2">Установка и настройка необходимого ПО</a></li>
+  <li><a href="#section-3">Результаты тестов производительности</a></li>
+</ul>
+
+<h3 id="section">Требуемое ПО</h3>
+
+<p>Для работы CMS UMI под OS Linux необходимо следующее ПО:</p>
+
+<ol>
+  <li>Веб-сервер (apache/nginx/lighttpd);</li>
+  <li>Интерпретатор Php &gt;= 5.2 (mod_php/php-cgi/php-fpm)</li>
+  <li>Сервер баз данных MySQL (mariadb,mysql,percona) с поддержкой InnoDB</li>
+</ol>
+
+<p>Для работы CMS Bitrix под OS Linux желательно следующее ПО:</p>
+
+<ol>
+  <li>Акселератор Php (zendoptimizer/zendoptimizer+/apc/eaccelerator/xcache), возможно использование memcache</li>
+</ol>
+
+<h3 id="section-1">Лирическое отступление про различные связки ПО и скорость работы</h3>
+
+<p>В ходе тестов на наших облачных серверах было выявленно, что максимальная производительность достигается в связке lighttpd+mysql+php-fcgi(zend server ce)+zendoptimizer+ либо nginx+apache+mysql+mod_php(zend server ce)+zendoptimizer+. Для хранения сессий используется файловая система tmpfs. Касаемо различных акселераторов Php и различных вариантов увеличения скорости работы было выявлено следующее:</p>
+
+<ul>
+  <li>Apc и Xcache дают примерно одинаковую скорость работы</li>
+  <li>Разница в скорости работы apache(prefork) и php-fpm минимальна. Поэтому если на сервере установлена только CMS Bitrix, то Php-fpm стоит ставить только, если требуется разграничение прав доступа для скриптов разных сайтов.</li>
+  <li>Минимальный размер оперативной памяти 512M (запустить CMS UMI можно и на 256, но производительность под нагрузкой оставляют желать лучшего)</li>
+  <li>Размер памяти, требуемый для Apc/Xcache для демо сайта не менее 32M</li>
+  <li>ZendOptimizer+ падает при попытке использования его с любым Php, отличным от Zend Server.</li>
+  <li>Шейпер дисковых операций отключен (при наличии достаточного объема оперативной памяти не оказывает никакого влияния)</li>
+  <li>Для MySQL и Php используется <a href="http://goog-perftools.sourceforge.net/doc/tcmalloc.html" title="tcmalloc">tcmalloc</a></li>
+</ul>
+
+<!--
+### Лирическое отступление про файловые системы
+
+Всестороннее тестирование различных файловых систем не производилось. Наилучшую скорость работы среди тестируемых фс (ext3 и ext4) дала ext4. Для конвертации текущей файловой системы были выполнены следующие операции (производить на свой страх и риск, выполняя команды Вы берете на себя всю ответственность за порчу данных):
+
+    1. tune2fs -O extents,uninit_bg,dir_index,dir_nlink,filetype /dev/xvda1
+    2. reboot
+    3. find / -xdev -type d -print0 | xargs -0 chattr +e
+    4. find / -xdev -type f -print0 | xargs -0 chattr +e
+
+Комманды 3 и 4 производят операции над всеми уже созданными файлами, поэтому перед этой операцией в целях экономии средств шефпер дисковых операций стоит ВКЛЮЧИТЬ.
+
+Внимание: Так как смена размера блочного устройства через панель управления с использованием ext4 нами не производилась, то после конвертации файловой системы в ext4 изменение размера диска через панель управления может начать работать неправильно, что может привести к порче данных.
+
+Для ускорения создания сессий и минимизации числа дисковых операций /tmp перемонтирован в tmpfs (по-умолчанию в Debian /tmp располагается на жестком диске) /etc/fstab:
+
+    /dev/xvda1   /            ext4      defaults,auto,relatime,async,barrier=0,nodiratime,journal_async_commit,max_batch_time=30000,journal_ioprio=0      1 1
+    /swap        swap         swap      defaults      0 0
+
+    none         /dev/pts     devpts    defaults      0 0
+    proc         /proc        proc      defaults      0 0
+    none         /proc/xen    xenfs     defaults      0 0
+
+    tmpfs        /tmp         tmpfs     size=100M     0 0
+-->
+
+<h3 id="section-2">Установка и настройка необходимого ПО</h3>
+
+<p>Добавляем необходимые gpg ключи:</p>
+
+<pre><code>wget http://repos.zend.com/zend.key -O - | apt-key add -
+</code></pre>
+
+<p>Добавляем требуемые репозитории:</p>
+
+<pre><code>echo "deb http://repos.zend.com/zend-server/deb server non-free" &gt;&gt; /etc/apt/sources.list.d/zend.list
+</code></pre>
+
+<p>Обновляем списки пакетов:</p>
+
+<pre><code>apt-get update
+</code></pre>
+
+<p>Устанавливаем необходимое ПО:</p>
+
+<pre><code>for i in zip zem xsl sockets optimizer-plus mysql mcrypt mbstring json gd ftp fileinfo exif curl ctype bz2 bin bcmath;
+do
+  apt-get -y install "php-5.3-${i}-zend-server"
+done
+</code></pre>
+
+<p>Создаем файл с переменными окружения, которые использует Zend Server CE:</p>
+
+<pre><code>cat &gt;&gt; /etc/profile.d/zend.sh &lt;&lt;EOF
+export PATH=$PATH:/usr/local/zend/bin
+EOF
+</code></pre>
+
+<p>Подгружаем новые переменные окружения в текущий shell:</p>
+
+<pre><code>source /etc/profile 
+</code></pre>
+
+<p>Продолжаем установку ПО:</p>
+
+<pre><code>apt-get -y install exim4-daemon-light nginx-full mysql-server unzip
+</code></pre>
+
+<p>Перенастраиваем отправку почты:</p>
+
+<pre><code>dpkg-reconfigure exim4-config
+</code></pre>
+
+<p><img src="/images/cms/bitrix/exim4-config_00.jpg" alt="exim4_config_00" title="exim4_config_00" />
+<img src="/images/cms/bitrix/exim4-config_01.jpg" alt="exim4_config_01" title="exim4_config_01" />
+<img src="/images/cms/bitrix/exim4-config_02.jpg" alt="exim4_config_02" title="exim4_config_02" />
+<img src="/images/cms/bitrix/exim4-config_03.jpg" alt="exim4_config_03" title="exim4_config_03" />
+<img src="/images/cms/bitrix/exim4-config_04.jpg" alt="exim4_config_04" title="exim4_config_04" />
+<img src="/images/cms/bitrix/exim4-config_05.jpg" alt="exim4_config_05" title="exim4_config_05" />
+<img src="/images/cms/bitrix/exim4-config_06.jpg" alt="exim4_config_06" title="exim4_config_06" />
+<img src="/images/cms/bitrix/exim4-config_07.jpg" alt="exim4_config_07" title="exim4_config_07" />
+<img src="/images/cms/bitrix/exim4-config_08.jpg" alt="exim4_config_08" title="exim4_config_08" />
+<img src="/images/cms/bitrix/exim4-config_09.jpg" alt="exim4_config_09" title="exim4_config_09" /></p>
+
+<p>В файле /etc/default/exim4 нужно поменять значение QUEUERUNNER с combined на queueonly если данный сервер не должен принимать входящую почту.
+Также стоит скорректировать время обхода очереди поменяв параметр QUEUEINTERVAL с 30m на 1m (обход очереди раз в минуту)</p>
+
+<pre><code>/etc/init.d/exim4 restart
+</code></pre>
+
+<p>Создаем директорию для будущего сайта:</p>
+
+<pre><code>mkdir -p /var/www/htdocs
+</code></pre>
+
+<p>Создаем виртуальный сервер для nginx:</p>
+
+<pre><code>cat &gt;&gt; /etc/nginx/sites-available/umi &lt;&lt;EOF
+gzip_vary on;
+gzip_proxied any;
+gzip_comp_level 6;
+gzip_buffers 16 8k;
+gzip_http_version 1.1;
+gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+directio 4m;
+max_ranges 4;
+
+open_file_cache          max=60000 inactive=60s;
+open_file_cache_valid    60s;
+open_file_cache_min_uses 2;
+open_file_cache_errors   on;
+
+postpone_output 512;
+reset_timedout_connection on;
+
+sendfile_max_chunk 2M;
+underscores_in_headers on;
+
+upstream apache {
+  server 127.0.0.1:8080;
+  keepalive 32;
+}
+
+server {
+  listen   80 default_server backlog=1024 deferred ;
+  root /var/www/htdocs;
+  index index.php;
+  
+  server_name localhost _ "";
+  server_name_in_redirect off;
+
+  proxy_redirect http://apache:8080 http://$host:80;
+
+  client_max_body_size 120m;
+  client_body_buffer_size 4M;
+
+  proxy_connect_timeout 90;
+  proxy_send_timeout 90;
+  proxy_read_timeout 90;
+  proxy_buffer_size 4k;
+  proxy_buffers 4 32k;
+  proxy_busy_buffers_size 64k;
+  proxy_temp_file_write_size 64k;
+
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+  location ~* ^.+\.(jpg|jpeg|gif|png|svg|js|css|mp3|ogg|mpe?g|avi|zip|gz|bz2?|rar)$ {
+    try_files $uri @backend;
+    expires  max;
+  }
+
+  location ~~* /(\.|install\.ini|install\.log|umi\.nginx\.conf|dbview\.php|config\.ini|classes|errors/logs|tpls|libs|sys-temp|umaps|usels|xsltTpls)$ {
+    deny all;
+  }
+
+  location /sitemap.xml {
+    rewrite ^ /sitemap.php last;
+  }
+
+  location /robots.txt {
+    rewrite ^ /sbots.php last;
+  }
+
+  location ~* ^\/?(udata|upage|uobject|ufs|usel|ulang|utype|umess|uhttp):?(\/\/)?(.*)$ {
+    rewrite ^ /releaseStreams.php?scheme=$1&amp;path=$3?$args last;
+  }
+
+  location ~* ^(.*)\.xml$ {
+    rewrite ^ /index.php?xmlMode=force&amp;path=$1&amp;$args last;
+  }
+
+  location ~* ^(.*)\.json$ {
+      rewrite ^ /index.php?jsonMode=force&amp;viewMode=full&amp;path=$1&amp;$args;
+  }
+
+  location / {
+    if ($is_args = '?') {
+      return 400;
+    }
+    if ($request_method = 'POST') {
+      return 400;
+    }
+    if ($cookie_umicms_session) {
+      return 400;
+    }
+    try_files $uri/index.html @backend;
+    root /var/www/htdocs/sys-temp/static-cache/$host;
+  }
+
+  location @backend {
+    rewrite ^ /index.php?path=$uri&amp;$args;
+  }
+
+  location ~ \.php$ {
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_pass http://apache;
+  }
+}
+EOF
+
+ln -s /etc/nginx/sites-available/umi /etc/nginx/sites-enabled/umi
+</code></pre>
+
+<p>Выключаем ненужные модули apache</p>
+
+<pre><code>a2dismod autoindex cgi deflate env negotiation reqtimeout setenvif
+</code></pre>
+
+<p>Создаем виртуальный сервер для apache</p>
+
+<pre><code>&lt;VirtualHost 127.0.0.1:8080&gt;
+  ServerAdmin webmaster@localhost
+  DocumentRoot /var/www/htdocs
+
+  &lt;Directory /&gt;
+    Options FollowSymLinks
+    AllowOverride None
+  &lt;/Directory&gt;
+ 
+  &lt;Directory /var/www/htdocs&gt;
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride All 
+    Order allow,deny
+    allow from all
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>Редактируем /etc/apache2/ports.conf меняя строки</p>
+
+<pre><code>NameVirtualHost *:80
+Listen 80
+</code></pre>
+
+<p>на</p>
+
+<pre><code>NameVirtualHost 127.0.0.1:8080
+Listen 127.0.0.1:8080
+</code></pre>
+
+<p>Редактируем /etc/apache2/apache2.conf меняя блок</p>
+
+<pre><code>&lt;IfModule mpm_prefork_module&gt;
+  StartServers          5
+  MinSpareServers       5
+  MaxSpareServers      10
+  MaxClients          150
+  MaxRequestsPerChild   0
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>на</p>
+
+<pre><code>&lt;IfModule mpm_prefork_module&gt;
+  StartServers          34
+  MinSpareServers       34
+  MaxSpareServers       34
+  MaxClients            34
+  MaxRequestsPerChild   0
+&lt;/IfModule&gt;
+</code></pre>
+
+<p>Редактируем параметры Php:</p>
+
+<pre><code>sed -i 's|zend_extension_manager.recheck_license_interval=5|zend_extension_manager.recheck_license_interval=0|g' /usr/local/zend/etc/ext.d/extension_manager.ini
+echo "mbstring.func_overload=2" &gt;&gt; /usr/local/zend/etc/ext.d/mbstring.ini
+echo "mbstring.internal_encoding=UTF-8" &gt;&gt; /usr/local/zend/etc/ext.d/mbstring.ini
+cat &gt;&gt; /usr/local/zend/etc/ext.d/umi.ini &lt;&lt;EOF
+display_errors = on
+log_errors = STDERR
+memory_limit = 128M
+realpath_cache_size = 4096k
+allow_call_time_pass_reference = on
+upload_max_filesize = 32M
+post_max_size = 32M
+precision = 10
+y2k_compliance = off
+session.entropy_file = /dev/urandom
+session.entropy_length = 512
+session.save_path = /tmp
+date.timezone = Europe/Moscow
+EOF
+
+sed -i 's|zend_optimizerplus.revalidate_path=0|zend_optimizerplus.revalidate_path=1|g' /usr/local/zend/etc/ext.d/optimizerplus.ini
+sed -i 's|zend_optimizerplus.dups_fix=0|zend_optimizerplus.dups_fix=1|g' /usr/local/zend/etc/ext.d/optimizerplus.ini
+sed -i 's|zend_optimizerplus.memory_consumption=(.*)|zend_optimizerplus.memory_consumption=32|g' /usr/local/zend/etc/ext.d/optimizerplus.ini
+sed -i 's|zend_optimizerplus.max_accelerated_files=(.*)|zend_optimizerplus.max_accelerated_files=60000|g' /usr/local/zend/etc/ext.d/optimizerplus.ini
+
+cat &gt;&gt; /usr/local/zend/etc/ext.d/optimizerplus.ini &lt;&lt;EOF
+zend_optimizerplus.save_comments=0
+EOF
+
+cwd=`pwd` ; cd /usr/local/zend/etc/conf.d &amp;&amp; ln -s ../ext.d/umi.ini umi.ini; cd $pwd
+</code></pre>
+
+<p>После этого перезапускаем apache и nginx:</p>
+
+<pre><code>/etc/init.d/apache2 restart &amp;&amp; /etc/init.d/nginx restart
+</code></pre>
+
+<p>Настройка базы данных:</p>
+
+<pre><code>cat &gt;&gt; /etc/mysql/conf.d/umi.cnf &lt;&lt;EOF
+[mysqld_safe]
+socket		= /var/run/mysqld/mysqld.sock
+nice		= -5
+
+[mysqld]
+skip-external-locking
+
+bind-address		= 127.0.0.1
+max_connections		= 34
+max_user_connections	= 32
+connect_timeout		= 20
+wait_timeout		= 60
+max_allowed_packet          = 4M
+thread_cache_size           = 128
+
+sort_buffer_size	        = 4M
+bulk_insert_buffer_size	= 6M
+tmp_table_size		= 6M
+max_heap_table_size	        = 6M
+
+table_cache		        = 1000
+myisam_recover              = BACKUP
+key_buffer_size		= 2M
+myisam_sort_buffer_size	= 1M
+concurrent_insert	        = 2
+read_buffer_size	        = 4M
+read_rnd_buffer_size	= 2M
+
+query_cache_limit		= 4M
+query_cache_size		= 24M
+query_cache_type		= 1
+
+default_storage_engine	= InnoDB
+innodb_log_buffer_size	= 80M
+innodb_file_per_table	= 1
+innodb_open_files	        = 1000
+
+innodb_buffer_pool_size=24M
+thread_concurrency=6
+thread_cache = 16
+innodb_flush_log_at_trx_commit = 2
+innodb_flush_method     = O_DIRECT
+join_buffer_size=2M
+transaction-isolation=READ-COMMITTED
+
+skip_name_resolve
+skip_networking
+EOF
+</code></pre>
+
+<p>Скачиваем установщик CMS Bitrix</p>
+
+<pre><code>wget http://www.umi-cms.ru/filemanager/download/83405/ -O /var/www/htdocs/umi.zip
+unzip /var/www/htdocs/umi.zip -d /var/www/htdocs/
+rm -f /var/www/htdocs/umi.zip
+chown -R www-data /var/www/
+</code></pre>
+
+<p>После установки необходимо включить кеширование в Apc:</p>
+
+<pre><code>cat &gt;&gt; /var/www/htdocs/bitrix/php_interface/dbconn.php &lt;&lt;EOF
+
+&lt;?php
+define("BX_CACHE_TYPE", "apc");
+define("BX_CACHE_SID", $_SERVER["DOCUMENT_ROOT"]."#01");
+?&gt;
+EOF
+</code></pre>
+
+<p>Также стоит указать сравнение:</p>
+
+<pre><code>cat &gt;&gt; /var/www/htdocs/bitrix/php_interface/after_connect.php &lt;&lt;EOF
+
+$DB-&gt;Query('SET collation_connection = "utf8_unicode_ci"');
+EOF
+</code></pre>
+
+<p>Настройки модулей:</p>
+
+<ul>
+  <li>Проактивная защита - удален</li>
+  <li>Компрессия - удален</li>
+  <li>Реклама/баннеры - удален</li>
+  <li>Автокеширование - HTML кеш - включен</li>
+</ul>
+
+<p>Настройки сети:</p>
+
+<pre><code>cat &gt;&gt; /etc/sysctl.d/bitrix.conf &lt;&lt;EOF
+net.core.rmem_max = 16777216
+net.core.wmem_max = 16777216
+net.ipv4.tcp_rmem = 4096 87380 16777216 
+net.ipv4.tcp_wmem = 4096 65536 16777216
+net.ipv4.tcp_sack = 0
+net.ipv4.tcp_timestamps = 0
+net.ipv4.tcp_fin_timeout = 1
+net.ipv4.tcp_tw_recycle = 1
+
+net.core.netdev_max_backlog = 262144
+net.core.somaxconn = 262144
+
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_max_orphans = 262144
+net.ipv4.tcp_max_syn_backlog = 262144
+net.ipv4.tcp_synack_retries = 2
+net.ipv4.tcp_syn_retries = 2
+
+net.ipv4.tcp_max_tw_buckets = 1440000
+
+net.ipv4.icmp_echo_ignore_broadcasts=1
+net.ipv4.conf.all.forwarding=0
+net.ipv4.conf.all.mc_forwarding=0
+
+net.ipv4.tcp_tw_reuse=1
+EOF
+</code></pre>
+
+<h3 id="section-3">Результаты тестов производительности</h3>
+
+<h4 id="nginxapache2mysqlmodphpzend-server-cezendoptimizer">nginx+apache2+mysql+mod_php(zend server ce)+zendoptimizer+</h4>
+
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

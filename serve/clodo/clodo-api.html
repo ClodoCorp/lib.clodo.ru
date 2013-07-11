@@ -1,0 +1,2797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>ClodoAPI</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+
+	<!-- GOOGLE SEARCH -->
+	<script>
+	  (function() {
+	    var cx = '005661710072474951780:6ywyu3asnyk';
+	    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+</head>
+
+<body>
+
+<!-- test -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				
+				<!-- GOOGLE SEARCH BOX -->
+				<div class='searchbox'>
+					<gcse:searchbox-only newWindow="false" enableAutoComplete='true'></gcse:searchbox-only>
+				</div>
+				<!-- /GOOGLE SEARCH BOX -->
+				
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/clodo/virtual-server.html">Virtual Server</a></div>
+									
+											<div class="category1item"><a href="/clodo/scale-server.html">Scale Server</a></div>
+									
+											<div class="category1item"><a href="/clodo/presets.html">Clodo presets</a></div>
+									
+											<div class="category1item"><a href="/clodo/clodo-api.html">ClodoAPI</a></div>
+									
+											<div class="category1item"><a href="/clodo/traffic-pricing.html">Тарификация трафика</a></div>
+									
+											<div class="category1item"><a href="/clodo/faq.html">FAQ</a></div>
+									
+								</div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/cloud-storage/">Облачное хранилище</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/CMS/">CMS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/web-server/">WEB-Сервер</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/network/">Сеть</a></div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/clodo/">Хостинг Clodo.ru</a> :: 
+	ClodoAPI
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Описание ClodoAPI (версия 1.0)</h1>
+
+<!-- ARTICLE _ START -->
+<p>Данный документ содержит описание ClodoAPI версии 1.0. Документ будет пополняться и расширяться по мере введения новой функциональности в API. По всем вопросам использования нашего api обращайтесь в службу технической поддержки Clodo.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#section">Авторизация</a></li>
+  <li><a href="#section-1">Формат запроса</a></li>
+  <li><a href="#section-2">Формат ответа</a></li>
+  <li><a href="#section-3">Ограничения на количество запросов</a></li>
+  <li><a href="#section-4">Работа с виртуальным сервером</a>    <ul>
+      <li><a href="#section-5">Список виртуальных серверов (общая информация)</a></li>
+      <li><a href="#section-6">Список виртуальных серверов (подробная информация)</a></li>
+      <li><a href="#section-7">Получение информации по виртуальному серверу</a></li>
+      <li><a href="#section-8">Создание виртуального сервера</a></li>
+      <li><a href="#section-9">Изменение параметров виртуального сервера</a></li>
+      <li><a href="#section-10">Удаление виртуального сервера</a></li>
+      <li><a href="#section-11">Изменение типа виртуального сервера</a></li>
+      <li><a href="#section-12">Команды серверу</a></li>
+      <li><a href="#section-13">Статистика использования ресурсов</a></li>
+      <li><a href="#section-14">Лог работы виртуального сервера</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-15">Управление резервными копиями виртуального сервера</a>    <ul>
+      <li><a href="#section-16">Список резервных копий</a></li>
+      <li><a href="#section-17">Создать резервную копию</a></li>
+      <li><a href="#section-18">Удалить резервную копию</a></li>
+      <li><a href="#section-19">Восстановить из резервной копии</a></li>
+      <li><a href="#section-20">Статус восстановления</a></li>
+      <li><a href="#section-21">Установка календаря обновления резервной копии</a></li>
+      <li><a href="#section-22">Установка описания резервной копии</a></li>
+    </ul>
+  </li>
+  <li><a href="#ip---">Управление IP-адресами виртуального сервера</a>    <ul>
+      <li><a href="#ip-">Список IP-адресов</a></li>
+      <li><a href="#ip--1">Добавить IP-адрес</a></li>
+      <li><a href="#ip--2">Удалить IP-адрес</a></li>
+      <li><a href="#ip----">Перемещение IP-адреса на другой сервер</a></li>
+      <li><a href="#section-23">Список подсетей</a></li>
+    </ul>
+  </li>
+  <li><a href="#dns">Управление DNS</a>    <ul>
+      <li><a href="#section-24">Получение списка зон</a></li>
+      <li><a href="#section-25">Добавление зоны</a></li>
+      <li><a href="#section-26">Удаление зоны</a></li>
+      <li><a href="#section-27">Просмотр зоны</a></li>
+      <li><a href="#section-28">Изменение зоны</a></li>
+      <li><a href="#section-29">Удаление записи в зоне</a></li>
+    </ul>
+  </li>
+  <li><a href="#helpdesk">Обращение в службу поддержки (Helpdesk)</a>    <ul>
+      <li><a href="#section-30">Получение списка открытых запросов</a></li>
+      <li><a href="#section-31">Получение содержимого запроса</a></li>
+      <li><a href="#section-32">Добавление запроса в службу поддержки</a></li>
+      <li><a href="#section-33">Добавление сообщения в запрос</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-34">Профиль пользователя</a>    <ul>
+      <li><a href="#section-35">Получение профиля пользователя</a></li>
+      <li><a href="#section-36">Изменение профиля пользователя</a></li>
+    </ul>
+  </li>
+  <li><a href="#cloud-storage">Cloud Storage</a>    <ul>
+      <li><a href="#section-37">Получение списка хранилищ</a></li>
+      <li><a href="#section-38">Получение расширенной информации о хранилище</a></li>
+      <li><a href="#section-39">Изменение настроек хранилища</a></li>
+      <li><a href="#section-40">Создание хранилища</a></li>
+      <li><a href="#section-41">Удаление хранилища</a></li>
+    </ul>
+  </li>
+  <li><a href="#section-42">Дополнительные возможности</a>    <ul>
+      <li><a href="#section-43">Получение статуса запроса</a></li>
+      <li><a href="#section-44">Запросы информации по биллингу</a></li>
+      <li><a href="#images">Доступные операционные системы (Images)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="section">Авторизация</h2>
+
+<p><strong>Свойства метода:</strong></p>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /<br />
+<strong>Входные параметры (HTTP headers):</strong>  </p>
+
+<ul>
+  <li><strong>X-Auth-User</strong> - логин пользователя  </li>
+  <li><strong>X-Auth-Key</strong> - ключ пользователя (ключ можно заказать в панели управления ресурсами в разделе “Мой профиль”)</li>
+</ul>
+
+<p><strong>Выходные параметры (HTTP headers):</strong></p>
+
+<ul>
+  <li><strong>X-Server-Management-Url</strong> - url доступа к функциям API  </li>
+  <li><strong>X-Auth-Token</strong> - токен авторизации</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li><strong>204</strong> - без ошибок</li>
+  <li><strong>401</strong> - ошибка авторизации</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>GET / HTTP/1.1  
+Host: api.clodo.ru  
+X-Auth-User: jdoe  
+X-Auth-Key: a86850deb2742ec3cb41518e26aa2d89  
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>HTTP/1.1 204 No Content  
+Date: Mon, 12 Nov 2007 15:32:21 GMT  
+Server: Apache  
+X-Server-Management-Url: https://api.clodo.ru/v1  
+X-Auth-Token: eaaafd18-0fed-4b3a-81b4-663c99ec1cbb  
+Content-Length: 0  
+Content-Type: text/plain; charset=UTF-8  
+</code></pre>
+
+<h2 id="section-1">Формат запроса</h2>
+
+<p><strong>Обращение(кроме авторизации) должно производиться на адрес, полученный в поле “X-Server-Management-Url” при авторизации + URL команды.</strong></p>
+
+<p>Например:</p>
+
+<p><strong>X-Server-Management-Url:</strong> https://api.clodo.ru/v1<br />
+<strong>URL команды:</strong> /servers<br />
+<strong>Итоговый URL:</strong> https://api.clodo.ru/v1/servers</p>
+
+<p>При каждом обращении к API (кроме авторизации) в заголовке HTTP-запроса должно присутствовать поле “X-Auth-Token” (значение этого поля получается при авторизации). Срок действия данного токена - 20 минут. По истечении данного времени необходимо заново произвести авторизацию и получить новый токен.</p>
+
+<p>В запросе могут дополнительно применяться следующие заголовки:</p>
+
+<ul>
+  <li><strong>Accept</strong> - указывает на формат, в котором вы хотите получить ответ (напр. “Accept: application/json” или “Accept: application/xml”);  </li>
+  <li><strong>Content-type</strong> - формат, в котором вы передаете в запросе дополнительные параметры. Как и предыдущий может быть в двух вариантах - “Content-type: application/json; charset=UTF-8” или “Content-type: application/xml; charset=UTF-8”. Важен только в случае запроса, требующего дополнительных параметров.</li>
+</ul>
+
+<h2 id="section-2">Формат ответа</h2>
+
+<p>При ответе на запрос к API в зависимости от результатов обработки обращения выставляется соответствующий http-код. При успешном выполнения запроса будет установлен - 200 (если есть данные для возврата пользователю) или 204 (если данных нет). При ошибке будет установлен код 4xx (код варируется в зависимости от ошибки). Кроме того будет возвращено расширенное сообщение (в формате json или xml - в зависимости от поля “Accept” в запросе) со следующими параметрами:</p>
+
+<ul>
+  <li><strong>code</strong> - код ошибки  </li>
+  <li><strong>message</strong> - наименование ошибки  </li>
+  <li><strong>details</strong> - расширенное описание ошибки  </li>
+</ul>
+
+<p>Пример сообщения об ошибке:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Forbidden code="403"&gt;
+  &lt;message&gt;Forbidden&lt;/message&gt;
+  &lt;details&gt;Доступ закрыт&lt;/details&gt;
+&lt;/Forbidden&gt;
+</code></pre>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;NotFound code="404"&gt;
+  &lt;message&gt;Not Found&lt;/message&gt;
+  &lt;details&gt;VPS не найдена&lt;/details&gt;
+&lt;/NotFound&gt;
+</code></pre>
+
+<pre><code>{"NotFound":{"code":404,"message":"Not Found","details":"Модуль не найден"}}
+</code></pre>
+
+<h2 id="section-3">Ограничения на количество запросов</h2>
+
+<p>Привязка лимитов осуществляется к пользователю, от имени которого делаются запросы. На данный момент выставлены следующие ограничения:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">HTTP метод</th>
+      <th style="text-align: left">URI</th>
+      <th style="text-align: left">RegExp</th>
+      <th style="text-align: left">Кол-во запросов</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">POST</td>
+      <td style="text-align: left">*</td>
+      <td style="text-align: left">.*</td>
+      <td style="text-align: left">10/мин</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">POST</td>
+      <td style="text-align: left">*/servers</td>
+      <td style="text-align: left">^/servers</td>
+      <td style="text-align: left">50/день</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PUT</td>
+      <td style="text-align: left">*</td>
+      <td style="text-align: left">.*</td>
+      <td style="text-align: left">10/мин</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DELETE</td>
+      <td style="text-align: left">*</td>
+      <td style="text-align: left">.*</td>
+      <td style="text-align: left">60/мин</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">GET</td>
+      <td style="text-align: left">*</td>
+      <td style="text-align: left">.*</td>
+      <td style="text-align: left">60/мин</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Здесь представлены значения по-умолчанию. Если Ваше приложение не укладывается в эти рамки, то по запросу в службу поддержки (с аргументацией необходимости изменения ограничений) могут быть внесены изменения для Вашего аккаунта.</p>
+
+<p>Для получения текущих ограничений для Вашего аккаунта Вы можете использовать следующий запрос:</p>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /limits<br />
+<strong>Входные параметры:</strong> нет<br />
+<strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li><strong>verb</strong> - HTTP метод</li>
+  <li><strong>URI</strong> - шаблон URI</li>
+  <li><strong>regex</strong> - RegEx URI</li>
+  <li><strong>value</strong> - количество запросов в единицу времени</li>
+  <li><strong>remaining</strong> - осталось запросов до лимита</li>
+  <li><strong>unit</strong> - единица времени (MINUTE, HOUR, DAY)</li>
+  <li><strong>resetTime</strong> - сброс счетчика запросов (unix timestamp)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li><strong>200</strong> - без ошибок</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;limits&gt;
+  &lt;rate&gt;
+    &lt;limit verb="POST" URI="*" regex=".*" value="100" remaining="100" unit="MINUTE"
+              resetTime="1302530220"/&gt;
+    &lt;limit verb="POST" URI="*/servers" regex=" ^/servers" value="500" remaining="500" unit="DAY"
+              resetTime="1302552000"/&gt;
+    &lt;limit verb="PUT" URI="*" regex=".*" value="100" remaining="100" unit="MINUTE"
+              resetTime="1302530220"/&gt;
+    &lt;limit verb="DELETE" URI="*" regex=".*" value="100" remaining="100" unit="MINUTE"
+              resetTime="1302530220"/&gt;
+    &lt;limit verb="GET" URI="*" regex=".*" value="100" remaining="99" unit="MINUTE"
+              resetTime="1302530220"/&gt;
+  &lt;/rate&gt;
+&lt;/limits&gt;
+</code></pre>
+<pre><code>{"limits":{"rate":[
+{"verb":"POST","URI":"*","regex":".*","value":"100","remaining":100,"unit":"MINUTE",
+        "resetTime":1302530580},
+{"verb":"POST","URI":"*/servers","regex":"^/servers","value":"500","remaining":500,"unit":"DAY",
+        "resetTime":1302552000},
+{"verb":"PUT","URI":"*","regex":".*","value":"100","remaining":100,"unit":"MINUTE",
+        "resetTime":1302530580},
+{"verb":"DELETE","URI":"*","regex":".*","value":"100","remaining":100,"unit":"MINUTE",
+        "resetTime":1302530580},
+{"verb":"GET","URI":"*","regex":".*","value":"100","remaining":99,"unit":"MINUTE",
+        "resetTime":1302530580}
+]}}
+</code></pre>
+
+<h2 id="section-4">Работа с виртуальным сервером</h2>
+
+<p>Раздел содержит описание набора методов для работы с виртуальными серверами на площадке Clodo.ru.</p>
+
+<h3 id="section-5">Список виртуальных серверов (общая информация)</h3>
+
+<p>Метод обеспечивающий получение списка виртуальных серверов на аккаунте и общей информации по виртуальным серверам.</p>
+
+<p><strong>Свойства метода:</strong></p>
+
+<p><strong>HTTP метод:</strong>	GET<br />
+<strong>URI:</strong> /servers  </p>
+
+<p><strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - номер VPS</li>
+  <li>name - название VPS(title)</li>
+  <li>imageId - id операционной системы</li>
+  <li>type - тип VPS</li>
+  <li>status - статус VPS</li>
+  <li>os_bits - битность ОС</li>
+  <li>os_type - тип ОС</li>
+  <li>addresses - ip-адреса</li>
+  <li>public - публичные IP адреса</li>
+  <li>private - приватные IP адреса</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - серверов не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;servers&gt;
+  &lt;server&gt;
+    &lt;id&gt;60&lt;/id&gt;
+    &lt;name&gt;main&lt;/name&gt;
+    &lt;imageId&gt;561&lt;/imageId&gt;
+    &lt;type&gt;VirtualServer&lt;/type&gt;
+    &lt;status&gt;is_running&lt;/status&gt;
+    &lt;os_type&gt;debian&lt;/os_type&gt;
+    &lt;os_bits&gt;64&lt;/os_bits&gt;
+    &lt;addresses&gt;
+      &lt;public&gt;
+        &lt;ip addr="188.127.237.202" primary_ip="1"/&gt;
+        &lt;ip addr="188.127.237.203"/&gt;
+      &lt;/public&gt;
+    &lt;/addresses&gt;
+  &lt;/server&gt;
+  &lt;server&gt;
+    &lt;id&gt;186&lt;/id&gt;
+    &lt;name&gt;scale&lt;/name&gt;
+    &lt;imageId&gt;531&lt;/imageId&gt;
+    &lt;type&gt;ScaleServer&lt;/type&gt;
+    &lt;status&gt;is_running&lt;/status&gt;
+    &lt;os_type&gt;centos&lt;/os_type&gt;
+    &lt;os_bits&gt;32&lt;/os_bits&gt;
+    &lt;addresses&gt;
+      &lt;public&gt;
+        &lt;ip addr="188.127.245.119" primary_ip="1"/&gt;
+        &lt;ip addr="188.127.245.120"/&gt;
+      &lt;/public&gt;
+    &lt;/addresses&gt;
+  &lt;/server&gt;
+&lt;/servers&gt;
+</code></pre>
+
+<h3 id="section-6">Список виртуальных серверов (подробная информация)</h3>
+
+<p>Метод обеспечивающий получение списка виртуальных серверов на аккаунте и подробной информации по виртуальным серверам.</p>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/detail<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - номер VPS</li>
+  <li>name - название VPS(title)</li>
+  <li>imageId - id операционной системы</li>
+  <li>type - тип VPS</li>
+  <li>status - статус VPS</li>
+  <li>addresses - ip-адреса
+    <ul>
+      <li>public - публичные адреса</li>
+      <li>private - праватные адреса</li>
+    </ul>
+  </li>
+  <li>vps_memory - оперативная память (для Scale - нижний предел памяти)</li>
+  <li>vps_memory_max - для Scale - верхний предел памяти</li>
+  <li>vps_os_title - название ОС</li>
+  <li>vps_os_version - версия ОС</li>
+  <li>vps_os_bits - битность ОС</li>
+  <li>vps_os_type - тип ОС</li>
+  <li>vps_vnc - ip и порт для VNC</li>
+  <li>vps_cpu_load - текущая загрузка CPU (в %)</li>
+  <li>vps_cpu_max - максимум CPU (в MHz)</li>
+  <li>vps_cpu_1h_min - минимальная загрузка CPU за час (в %)</li>
+  <li>vps_cpu_1h_max - максимальная загрузка CPU за час (в %)</li>
+  <li>vps_mem_load - текущая используемая память (в %)</li>
+  <li>vps_mem_max - текущая выделенная память (в MB)</li>
+  <li>vps_mem_1h_min - минимальная используемая память за час (в MB)</li>
+  <li>vps_mem_1h_max - максимальная используемая память за час (в MB)</li>
+  <li>vps_disk_load - занятое место на диске (в %)</li>
+  <li>vps_hdd_load - занятое место на диске (в MB)</li>
+  <li>vps_hdd_max - размер диска (в GB)</li>
+  <li>vps_createdate - дата первого запуска</li>
+  <li>vps_billingdate - оплачен до данной даты (для Virtual Server)</li>
+  <li>vps_update - дата последнего запуска (uptime)</li>
+  <li>vps_update_days - время с последнего запуска (uptime)</li>
+  <li>vps_root_pass - пароль root по-умолчанию</li>
+  <li>vps_user_pass - пароль user по-умолчанию</li>
+  <li>vps_vnc_pass - пароль для VNC</li>
+  <li>vps_traff - купленный пакет трафика (если есть) (в GB)</li>
+  <li>vps_traff_used - остаток купленного пакета трафика (если есть) (в GB)</li>
+  <li>vps_traff_free - бесплатный пакет трафика (если есть) (в GB)</li>
+  <li>vps_traff_used_free - остаток бесплатного пакета трафика (если есть) (в GB)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - серверов не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;servers&gt;
+  &lt;server&gt;
+    &lt;vps_memory&gt;2048&lt;/vps_memory&gt;
+    &lt;vps_memory_max&gt;2048&lt;/vps_memory_max&gt;
+    &lt;vps_mem_load&gt;6.76&lt;/vps_mem_load&gt;
+    &lt;vps_cpu_load&gt;1.67&lt;/vps_cpu_load&gt;
+    &lt;vps_disk_load&gt;34&lt;/vps_disk_load&gt;
+    &lt;vps_os_title&gt;Debian&lt;/vps_os_title&gt;
+    &lt;vps_os_version&gt;6&lt;/vps_os_version&gt;
+    &lt;vps_os_bits&gt;64&lt;/vps_os_bits&gt;
+    &lt;vps_os_type&gt;debian&lt;/vps_os_type&gt;
+    &lt;id&gt;60&lt;/id&gt;
+    &lt;name&gt;main&lt;/name&gt;
+    &lt;imageId&gt;561&lt;/imageId&gt;
+    &lt;type&gt;VirtualServer&lt;/type&gt;
+    &lt;status&gt;is_running&lt;/status&gt;
+    &lt;vps_vnc&gt;188.127.239.206:5905&lt;/vps_vnc&gt;
+    &lt;vps_cpu_max&gt;2267&lt;/vps_cpu_max&gt;
+    &lt;vps_cpu_1h_min&gt;0.00&lt;/vps_cpu_1h_min&gt;
+    &lt;vps_cpu_1h_max&gt;1.67&lt;/vps_cpu_1h_max&gt;
+    &lt;vps_mem_1h_min&gt;138.39&lt;/vps_mem_1h_min&gt;
+    &lt;vps_mem_1h_max&gt;138.39&lt;/vps_mem_1h_max&gt;
+    &lt;vps_hdd_load&gt;1694&lt;/vps_hdd_load&gt;
+    &lt;vps_hdd_max&gt;5&lt;/vps_hdd_max&gt;
+    &lt;addresses&gt;
+      &lt;public&gt;
+        &lt;ip addr="188.127.245.119" primary_ip="1"/&gt;
+        &lt;ip addr="188.127.245.120"/&gt;
+      &lt;/public&gt;
+    &lt;/addresses&gt;
+    &lt;vps_root_pass&gt;LKjKH8JK9j&lt;/vps_root_pass&gt;
+    &lt;vps_user_pass&gt;lJKBFyh6Ff&lt;/vps_user_pass&gt;
+    &lt;vps_vnc_pass&gt;lhGu7HF6jF&lt;/vps_vnc_pass&gt;
+    &lt;vps_createdate&gt;07.02.2011 11:09:02&lt;/vps_createdate&gt;
+    &lt;vps_billingdate&gt;04.05.2011 22:11:47&lt;/vps_billingdate&gt;
+    &lt;vps_update&gt;04.03.2011 22:12:43&lt;/vps_update&gt;
+    &lt;vps_update_days&gt;(31 день)&lt;/vps_update_days&gt;
+    &lt;vps_traff/&gt;
+    &lt;vps_traff_used/&gt;
+    &lt;vps_traff_free/&gt;
+    &lt;vps_traff_used_free/&gt;
+  &lt;/server&gt;
+  &lt;server&gt;
+    &lt;vps_memory&gt;512&lt;/vps_memory&gt;
+    &lt;vps_memory_max&gt;512&lt;/vps_memory_max&gt;
+    &lt;vps_mem_load&gt;12.50&lt;/vps_mem_load&gt;
+    &lt;vps_cpu_load&gt;0.00&lt;/vps_cpu_load&gt;
+    &lt;vps_disk_load&gt;31&lt;/vps_disk_load&gt;
+    &lt;vps_os_title&gt;Debian&lt;/vps_os_title&gt;
+    &lt;vps_os_version&gt;6&lt;/vps_os_version&gt;
+    &lt;vps_os_bits&gt;32&lt;/vps_os_bits&gt;
+    &lt;vps_os_type&gt;debian&lt;/vps_os_type&gt;
+    &lt;id&gt;186&lt;/id&gt;
+    &lt;name&gt;scale&lt;/name&gt;
+    &lt;imageId&gt;531&lt;/imageId&gt;
+    &lt;type&gt;ScaleServer&lt;/type&gt;
+    &lt;status&gt;is_running&lt;/status&gt;
+    &lt;vps_vnc&gt;188.127.239.206:5902&lt;/vps_vnc&gt;
+    &lt;vps_cpu_max&gt;2267&lt;/vps_cpu_max&gt;
+    &lt;vps_cpu_1h_min&gt;0.00&lt;/vps_cpu_1h_min&gt;
+    &lt;vps_cpu_1h_max&gt;1.67&lt;/vps_cpu_1h_max&gt;
+    &lt;vps_mem_1h_min&gt;98.33&lt;/vps_mem_1h_min&gt;
+    &lt;vps_mem_1h_max&gt;98.57&lt;/vps_mem_1h_max&gt;
+    &lt;vps_hdd_load&gt;1539&lt;/vps_hdd_load&gt;
+    &lt;vps_hdd_max&gt;5&lt;/vps_hdd_max&gt;
+    &lt;addresses&gt;
+      &lt;public&gt;
+        &lt;ip addr="188.127.237.202" primary_ip="1"/&gt;
+        &lt;ip addr="188.127.237.203"/&gt;
+      &lt;/public&gt;
+    &lt;/addresses&gt;
+    &lt;vps_root_pass&gt;87JgRe6BC6&lt;/vps_root_pass&gt;
+    &lt;vps_user_pass&gt;kT54bFEoIU&lt;/vps_user_pass&gt;
+    &lt;vps_vnc_pass&gt;bVtRrie9Rq&lt;/vps_vnc_pass&gt;
+    &lt;vps_createdate&gt;06.02.2011 17:15:53&lt;/vps_createdate&gt;
+    &lt;vps_billingdate&gt;10.04.2011 03:24:59&lt;/vps_billingdate&gt;
+    &lt;vps_update&gt;03.04.2011 17:13:45&lt;/vps_update&gt;
+    &lt;vps_update_days&gt;(2 дня)&lt;/vps_update_days&gt;
+    &lt;vps_traff/&gt;
+    &lt;vps_traff_used/&gt;
+    &lt;vps_traff_free/&gt;
+    &lt;vps_traff_used_free/&gt;
+  &lt;/server&gt;
+&lt;/servers&gt;
+</code></pre>
+
+<h3 id="section-7">Получение информации по виртуальному серверу</h3>
+
+<p><strong>HTTP метод:</strong>	GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id сервера</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - номер VPS</li>
+  <li>name - название VPS(title)</li>
+  <li>imageId - id операционной системы</li>
+  <li>type - тип VPS</li>
+  <li>status - статус VPS</li>
+  <li>addresses - ip-адреса</li>
+  <li>public - публичные адреса</li>
+  <li>private - приватные адреса</li>
+  <li>vps_memory - оперативная память (для Scale - нижний предел памяти)</li>
+  <li>vps_memory_max - для Scale - верхний предел памяти</li>
+  <li>vps_os_title - название ОС</li>
+  <li>vps_os_version - версия ОС</li>
+  <li>vps_os_bits - битность ОС</li>
+  <li>vps_os_type - тип ОС</li>
+  <li>vps_vnc - ip и порт для VNC</li>
+  <li>vps_cpu_load - текущая загрузка CPU (в %)</li>
+  <li>vps_cpu_max - максимум CPU (в MHz)</li>
+  <li>vps_cpu_1h_min - минимальная загрузка CPU за час (в %)</li>
+  <li>vps_cpu_1h_max - максимальная загрузка CPU за час (в %)</li>
+  <li>vps_mem_load - текущая используемая память (в %)</li>
+  <li>vps_mem_max - текущая выделенная память (в MB)</li>
+  <li>vps_mem_1h_min - минимальная используемая память за час (в MB)</li>
+  <li>vps_mem_1h_max - максимальная используемая память за час (в MB)</li>
+  <li>vps_disk_load - занятое место на диске (в %)</li>
+  <li>vps_hdd_load - занятое место на диске (в MB)</li>
+  <li>vps_hdd_max - размер диска (в GB)</li>
+  <li>vps_createdate - дата первого запуска</li>
+  <li>vps_billingdate - оплачен до данной даты (для Virtual Server)</li>
+  <li>vps_update - дата последнего запуска (uptime)</li>
+  <li>vps_update_days - время с последнего запуска (uptime)</li>
+  <li>vps_root_pass - пароль root по-умолчанию</li>
+  <li>vps_user_pass - пароль user по-умолчанию</li>
+  <li>vps_vnc_pass - пароль для VNC</li>
+  <li>vps_traff - купленный пакет трафика (если есть) (в GB)</li>
+  <li>vps_traff_used - остаток купленного пакета трафика (если есть) (в GB)</li>
+  <li>vps_traff_free - бесплатный пакет трафика (если есть) (в GB)</li>
+  <li>vps_traff_used_free - остаток бесплатного пакета трафика (если есть) (в GB)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - сервер не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+  &lt;vps_memory&gt;768&lt;/vps_memory&gt;
+  &lt;vps_memory_max&gt;768&lt;/vps_memory_max&gt;
+  &lt;vps_mem_load&gt;8.21&lt;/vps_mem_load&gt;
+  &lt;vps_cpu_load&gt;0.00&lt;/vps_cpu_load&gt;
+  &lt;vps_disk_load&gt;18&lt;/vps_disk_load&gt;
+  &lt;vps_os_title&gt;Debian&lt;/vps_os_title&gt;
+  &lt;vps_os_version&gt;6&lt;/vps_os_version&gt;
+  &lt;vps_os_bits&gt;64&lt;/vps_os_bits&gt;
+  &lt;vps_os_type&gt;debian&lt;/vps_os_type&gt;
+  &lt;id&gt;298&lt;/id&gt;
+  &lt;name&gt;api-test&lt;/name&gt;
+  &lt;imageId&gt;561&lt;/imageId&gt;
+  &lt;type&gt;VirtualServer&lt;/type&gt;
+  &lt;status&gt;is_running&lt;/status&gt;
+  &lt;vps_vnc&gt;188.127.239.206:5909&lt;/vps_vnc&gt;
+  &lt;vps_cpu_max&gt;2267&lt;/vps_cpu_max&gt;
+  &lt;vps_cpu_1h_min&gt;0.00&lt;/vps_cpu_1h_min&gt;
+  &lt;vps_cpu_1h_max&gt;1.67&lt;/vps_cpu_1h_max&gt;
+  &lt;vps_mem_1h_min&gt;63.05&lt;/vps_mem_1h_min&gt;
+  &lt;vps_mem_1h_max&gt;63.07&lt;/vps_mem_1h_max&gt;
+  &lt;vps_hdd_load&gt;901&lt;/vps_hdd_load&gt;
+  &lt;vps_hdd_max&gt;5&lt;/vps_hdd_max&gt;
+  &lt;addresses&gt;
+    &lt;public&gt;
+      &lt;ip addr="188.127.237.202" primary_ip="1"/&gt;
+      &lt;ip addr="188.127.237.203"/&gt;
+    &lt;/public&gt;
+  &lt;/addresses&gt;
+  &lt;vps_root_pass&gt;LKjKH8JK9j&lt;/vps_root_pass&gt;
+  &lt;vps_user_pass&gt;lJKBFyh6Ff&lt;/vps_user_pass&gt;
+  &lt;vps_vnc_pass&gt;lhGu7HF6jF&lt;/vps_vnc_pass&gt;
+  &lt;vps_createdate&gt;07.02.2011 11:09:02&lt;/vps_createdate&gt;
+  &lt;vps_billingdate&gt;04.05.2011 22:11:47&lt;/vps_billingdate&gt;
+  &lt;vps_update&gt;04.03.2011 22:12:43&lt;/vps_update&gt;
+  &lt;vps_update_days&gt;(31 день)&lt;/vps_update_days&gt;
+  &lt;vps_traf/&gt;
+  &lt;vps_traff_used/&gt;
+  &lt;vps_traff_free/&gt;
+  &lt;vps_traff_used_free/&gt;
+&lt;/server&gt;
+</code></pre>
+
+<h3 id="section-8">Создание виртуального сервера</h3>
+
+<p><strong>Выбор датацентра для создания VPS осуществляется отправкой запроса к соответствующему API:</strong></p>
+
+<ul>
+  <li>api.oversun.clodo.ru - Oversun</li>
+  <li>api.kh.clodo.ru - KIAE House</li>
+  <li>api.mn.clodo.ru - Miran</li>
+</ul>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>name - название VPS</li>
+  <li>vps_title - название VPS (может использоваться либо этот параметр, либо “name”)</li>
+  <li>vps_type - тип VPS (VirtualServer,ScaleServer)</li>
+  <li>vps_memory - память (для ScaleServer - нижняя граница) (в MB)</li>
+  <li>vps_memory_max - верхняя граница памяти для ScaleServer (в MB)</li>
+  <li>vps_hdd - размер диска (в GB)</li>
+  <li>vps_admin - тип поддержки (1 - обычная, 3 - расширенная)</li>
+  <li>vps_os - id ОС</li>
+  <li>vps_os_preset - id пресета (указывается вместо vps_os)</li>
+  <li>vps_os_preset_params - дополнительные параметры пресета. список меняется. указывается только в случае установки пресета</li>
+  <li>vps_pay_period - период оплаты для VirtualServer (h - час, m - месяц)</li>
+  <li>vps_abonement - количество pay_period в периоде оплаты (1,3,6,12). Для почасовой может быть только 1.</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - номер VPS</li>
+  <li>name - название VPS</li>
+  <li>imageId - id ОС</li>
+  <li>adminPass - пароль root</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>405 - создание серверов недоступно</li>
+  <li>500 - внутренняя ошибка выполнения запроса</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+    &lt;vps_title&gt;api-test&lt;/vps_title&gt;
+    &lt;vps_type&gt;VirtualServer&lt;/vps_type&gt;
+    &lt;vps_memory&gt;512&lt;/vps_memory&gt;
+    &lt;vps_hdd&gt;5&lt;/vps_hdd&gt;
+    &lt;vps_admin&gt;1&lt;/vps_admin&gt;
+    &lt;vps_os&gt;551&lt;/vps_os&gt;
+&lt;/server&gt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+    &lt;vps_title&gt;api-test&lt;/vps_title&gt;
+    &lt;vps_type&gt;ScaleServer&lt;/vps_type&gt;
+    &lt;vps_memory&gt;512&lt;/vps_memory&gt;
+    &lt;vps_memory_max&gt;512&lt;/vps_memory_max&gt;
+    &lt;vps_hdd&gt;5&lt;/vps_hdd&gt;
+    &lt;vps_admin&gt;1&lt;/vps_admin&gt;
+    &lt;vps_os&gt;541&lt;/vps_os&gt;
+&lt;/server&gt;
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+    &lt;id&gt;299&lt;/id&gt;
+    &lt;name&gt;api-test2&lt;/name&gt;
+    &lt;imageId&gt;541&lt;/imageId&gt;
+    &lt;adminPass&gt;GbRAWJT2V8&lt;/adminPass&gt;
+&lt;/server&gt;
+</code></pre>
+
+<h3 id="section-9">Изменение параметров виртуального сервера</h3>
+
+<p><strong>HTTP метод:</strong> PUT<br />
+<strong>URI:</strong> /servers/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>vps_memory - память (для ScaleServer - нижняя граница) (в MB)</li>
+  <li>vps_memory_max - верхняя граница памяти для ScaleServer (в MB)</li>
+  <li>vps_hdd - размер диска (в GB)</li>
+  <li>vps_admin - тип поддержки (1 - обычная, 3 - расширенная)</li>
+  <li>vps_daylimit - суточное ограничение по списаниям для ScaleServer (в руб.)</li>
+  <li>vps_swapsize - размер swap-файла (128 - 6144, в MB)</li>
+  <li>vps_hddshaper - вкл/откл шейпера дисковых операций (0/1)</li>
+  <li>vps_traff - покупка пакета трафика (даже если уже пакет куплен, то будет добавлен еще один указанного размера) (в GB)</li>
+  <li>vps_memblocksize - размер блока памяти для масштабирования (1 - 2048, в MB)</li>
+  <li>vps_minfreebytes - Минимальная разница между выделенной и используемой памятью (1 - 1024, в MB)</li>
+  <li>vps_meminterval - интервал опроса (в сек)</li>
+  <li>vps_pay_period - период оплаты для VirtualServer (h - час, m - месяц)</li>
+  <li>vps_abonement - количество pay_period в периоде оплаты (1,3,6,12). Для почасовой может быть только 1.</li>
+  <li>Изменение дополнительных настроек VPS (по одному параметру за запрос):
+    <ul>
+      <li>modify_type - отмена запланированного изменения параметров VPS (“params” или “period”)</li>
+      <li>newconfig_date - установка временнОго сдвига для применения новых параметров VPS (в днях 0-23)</li>
+      <li>vps_abonement_disabled - отмена запланированного удаления VirtualServer (0) / отключени автопродления оплаты VirtualSever (1)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>405 - функция временно недоступна</li>
+  <li>500 - внутренняя ошибка выполнения запроса</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+	&lt;vps_hdd&gt;5&lt;/vps_hdd&gt;
+&lt;/server&gt;
+</code></pre>
+<pre><code>{
+    "server":{
+        "vps_hdd":5
+    }
+}
+</code></pre>
+
+<h3 id="section-10">Удаление виртуального сервера</h3>
+
+<p><strong>HTTP метод:</strong> DELETE<br />
+<strong>URI:</strong> /servers/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>405 - функция временно недоступна</li>
+  <li>500 - внутренняя ошибка выполнения запроса</li>
+</ul>
+
+<h3 id="section-11">Изменение типа виртуального сервера</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/change_type/  </p>
+
+<p><strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>pay_type - устанавливаемый период оплаты при смене типа на VirtualServer:
+    <ul>
+      <li>1h - почасовая</li>
+      <li>1m - 1 месяц</li>
+      <li>3m - 3 месяца</li>
+      <li>6m - 6 месяцев</li>
+      <li>12m - 1 год</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>405 - функция временно недоступна</li>
+  <li>500 - внутренняя ошибка выполнения запроса</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;server&gt;
+	&lt;pay_type&gt;3m&lt;/pay_type&gt;
+&lt;/server&gt;
+</code></pre>
+<pre><code>{"server":{"pay_type":"3m"}}
+</code></pre>
+
+<h3 id="section-12">Команды серверу</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/action<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>&lt;action&gt; - команда серверу:
+    <ul>
+      <li>start - запуск VPS</li>
+      <li>reboot - перезапуск VPS</li>
+      <li>stop - выключение VPS</li>
+      <li>rebuild - переустановка ОС. Параметры:
+        <ul>
+          <li>imageId - id ОС</li>
+          <li>vps_isp - установить ISP</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>405 - функция временно недоступна</li>
+  <li>500 - внутренняя ошибка выполнения запроса</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;reboot/&gt;
+
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;rebuild imageId="27"/&gt;
+</code></pre>
+
+<h3 id="section-13">Статистика использования ресурсов</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /stats/&lt;id&gt;  </p>
+
+<p><strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>from - начало периода</li>
+  <li>to - окончание периода</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>statdate - unix timestamp записи</li>
+  <li>cpu_perc - загрузка процессора (в %)</li>
+  <li>mem_current - выделенная память (в Кб)</li>
+  <li>mem_used - используемая память (в Кб)</li>
+  <li>net_rx - входящий трафик за минуту (в Кб)</li>
+  <li>net_tx - исходящий трафик за минуту (в Кб)</li>
+  <li>hdd_read - запросы на чтение с жесткого диска</li>
+  <li>hdd_read - запросы на запись на жесткий диск</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - некорректный запрос</li>
+  <li>404 - записей не найдено</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;stats&gt;
+  &lt;from&gt;2011-04-04 00:00:00&lt;/from&gt;
+  &lt;to&gt;2011-04-04 23:59:59&lt;/to&gt;
+&lt;/stats&gt;
+</code></pre>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;stats&gt;
+  &lt;from&gt;1301860800&lt;/from&gt;
+  &lt;to&gt;1301947199&lt;/to&gt;
+&lt;/stats&gt;
+</code></pre>
+<pre><code>{"stats":{"from":"1301860800","to":"1301947199"}}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;stats&gt;
+  &lt;row&gt;
+    &lt;statdate&gt;1301917560&lt;/statdate&gt;
+    &lt;cpu_sec&gt;1&lt;/cpu_sec&gt;
+    &lt;cpu_perc&gt;0.25&lt;/cpu_perc&gt;
+    &lt;mem_current&gt;524288&lt;/mem_current&gt;
+    &lt;mem_used&gt;146936&lt;/mem_used&gt;
+    &lt;net_rx&gt;548&lt;/net_rx&gt;
+    &lt;net_tx&gt;177&lt;/net_tx&gt;
+    &lt;hdd_read&gt;0&lt;/hdd_read&gt;
+    &lt;hdd_write&gt;75&lt;/hdd_write&gt;
+  &lt;/row&gt;
+  &lt;row&gt;
+    &lt;statdate&gt;1301917620&lt;/statdate&gt;
+    &lt;cpu_sec&gt;0&lt;/cpu_sec&gt;
+    &lt;cpu_perc&gt;2.29&lt;/cpu_perc&gt;
+    &lt;mem_current&gt;524288&lt;/mem_current&gt;
+    &lt;mem_used&gt;143280&lt;/mem_used&gt;
+    &lt;net_rx&gt;1&lt;/net_rx&gt;
+    &lt;net_tx&gt;1&lt;/net_tx&gt;
+    &lt;hdd_read&gt;0&lt;/hdd_read&gt;
+    &lt;hdd_write&gt;33&lt;/hdd_write&gt;
+  &lt;/row&gt;
+&lt;/stats&gt;
+</code></pre>
+
+<h3 id="section-14">Лог работы виртуального сервера</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/log/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id операции</li>
+  <li>command - действие</li>
+  <li>user - пользователь, инициировавший действие</li>
+  <li>date - дата события</li>
+  <li>status - статус операции</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;logs&gt;
+  &lt;log&gt;
+    &lt;id&gt;86097442&lt;/id&gt;
+    &lt;command&gt;Старт&lt;/command&gt;
+    &lt;user&gt;Клиент (панель)&lt;/user&gt;
+    &lt;date&gt;25.12.2011 04:13:50&lt;/date&gt;
+    &lt;status&gt;ОК&lt;/status&gt;
+  &lt;/log&gt;
+  &lt;log&gt;
+    &lt;id&gt;86097082&lt;/id&gt;
+    &lt;command&gt;Выключение&lt;/command&gt;
+    &lt;user&gt;Клиент (панель)&lt;/user&gt;
+    &lt;date&gt;25.12.2011 04:12:30&lt;/date&gt;
+    &lt;status&gt;ОК&lt;/status&gt;
+  &lt;/log&gt;
+  &lt;log&gt;
+    &lt;id&gt;85942222&lt;/id&gt;
+    &lt;command&gt;Перезагрузка&lt;/command&gt;
+    &lt;user&gt;Cloud Core&lt;/user&gt;
+    &lt;date&gt;13.12.2011 12:45:49&lt;/date&gt;
+    &lt;status&gt;ОК&lt;/status&gt;
+  &lt;/log&gt;
+&lt;/logs&gt;
+</code></pre>
+
+<h2 id="section-15">Управление резервными копиями виртуального сервера</h2>
+
+<h3 id="section-16">Список резервных копий</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/getlist<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>file - id резервной копии</li>
+  <li>date - дата резервной копии</li>
+  <li>price - стоимость (руб./час)</li>
+  <li>size - размер (в Гб)</li>
+  <li>desc - описание</li>
+  <li>days - дни недели обновления резервной копии через запятую (1 - пн,…, 7 - вс)</li>
+  <li>time - время обновления резервной копии по дням “days”</li>
+  <li>os_type - тип ОС в резервной копии</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backups&gt;
+  &lt;backup&gt;
+    &lt;file&gt;2&lt;/file&gt;
+    &lt;date&gt;2012-01-24 04:00:02&lt;/date&gt;
+    &lt;price&gt;0.05&lt;/price&gt;
+    &lt;size&gt;5&lt;/size&gt;
+    &lt;desc/&gt;
+    &lt;days&gt;1,2,3,4,5,6,7&lt;/days&gt;
+    &lt;time&gt;04:00&lt;/time&gt;
+    &lt;os_type&gt;debian&lt;/os_type&gt;
+  &lt;/backup&gt;
+  &lt;backup&gt;
+    &lt;file&gt;3&lt;/file&gt;
+    &lt;date&gt;2011-12-21 19:41:09&lt;/date&gt;
+    &lt;price&gt;0.05&lt;/price&gt;
+    &lt;size&gt;5&lt;/size&gt;
+    &lt;desc/&gt;
+    &lt;days/&gt;
+    &lt;time&gt;00:00&lt;/time&gt;
+    &lt;os_type&gt;debian&lt;/os_type&gt;
+  &lt;/backup&gt;
+&lt;/backups&gt;
+</code></pre>
+<pre><code>{"backups":{"backup":[
+    {"file":"2","date":"2012-01-24 04:00:02","price":0.05,"size":"5","desc":"","days":"1,2,3,4,5,6,7","time":"04:00","os_type":"debian"},
+    {"file":"3","date":"2011-12-21 19:41:09","price":0.05,"size":"5","desc":"","days":"","time":"00:00","os_type":"debian"}
+]}}
+</code></pre>
+
+<h3 id="section-17">Создать резервную копию</h3>
+
+<p><strong>HTTP метод:</strong> GET | POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/create<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>file - номер копии для перезаписи (опциональный)</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>req - номер запроса на создание</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;file&gt;2&lt;/file&gt;
+</code></pre>
+<pre><code>{"file":"2"}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backup_create&gt;
+   &lt;req&gt;3120121&lt;/req&gt;
+&lt;/backup_create&gt;
+</code></pre>
+<pre><code>{"backup_create":{"req":3120121}}
+</code></pre>
+
+<h3 id="section-18">Удалить резервную копию</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/delete<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>file - номер копии для удаления</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>req - номер запроса на удаление</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;file&gt;2&lt;/file&gt;
+</code></pre>
+<pre><code>{"file":"2"}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backup_delete&gt;
+   &lt;req&gt;3120121&lt;/req&gt;
+&lt;/backup_delete&gt;
+</code></pre>
+<pre><code>{"backup_delete":{"req":3120121}}
+</code></pre>
+
+<h3 id="section-19">Восстановить из резервной копии</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/restore<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>file - id резервной копии</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>req - номер запроса на восстановление</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;file&gt;2&lt;/file&gt;
+</code></pre>
+<pre><code>{"file":"2"}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backup_restore&gt;
+   &lt;req&gt;3120121&lt;/req&gt;
+&lt;/backup_restore&gt;
+</code></pre>
+<pre><code>{"backup_restore":{"req":3120121}}
+</code></pre>
+
+<h3 id="section-20">Статус восстановления</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/getstate<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>req - номер запроса на восстановление</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>progress - статус восстановления (в %)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;req&gt;3120121&lt;/req&gt;
+</code></pre>
+<pre><code>{"req":"3120121"}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;restore_state&gt;
+   &lt;progress&gt;54&lt;/progress&gt;
+&lt;/restore_state&gt;
+</code></pre>
+<pre><code>{"restore_state":{"progress":54}}
+</code></pre>
+
+<h3 id="section-21">Установка календаря обновления резервной копии</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/setcal<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>file - id резервной копии</li>
+  <li>backups_days - список дней (1 - пн,…, 7 - вс)</li>
+  <li>backups_time - время обновления (hh:mm)</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backup&gt;
+  &lt;file&gt;2&lt;/file&gt;
+  &lt;backups_days&gt;1,3,5,7&lt;/backups_days&gt;
+  &lt;backups_time&gt;03:30&lt;/backups_time&gt;
+&lt;/backup&gt;
+</code></pre>
+<pre><code>{"file":"2", "backups_days":"1,3,5,7", "backups_time":"03:30"}
+</code></pre>
+
+<h3 id="section-22">Установка описания резервной копии</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/backup/setdesc<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>file - id резервной копии</li>
+  <li>desc - описание</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;backup&gt;
+  &lt;file&gt;2&lt;/file&gt;
+  &lt;desc&gt;Описание&lt;/desc&gt;
+&lt;/backup&gt;
+</code></pre>
+<pre><code>{"file":"2", "desc":"Описание"}
+</code></pre>
+
+<h2 id="ip---">Управление IP-адресами виртуального сервера</h2>
+
+<h3 id="ip-">Список IP-адресов</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/ips<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>public - публичные адреса</li>
+  <li>addr - адрес</li>
+  <li>is_primary - является ли адрес основным на VPS (0|1)</li>
+  <li>isp - привязана ли к данному адресу лицензия ISP (0|1)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;addresses&gt;
+  &lt;public&gt;
+    &lt;ip addr="62.76.41.218" is_primary="1" isp=""/&gt;
+    &lt;ip addr="62.76.41.219" is_primary="" isp=""/&gt;
+  &lt;/public&gt;
+&lt;/addresses&gt;
+</code></pre>
+<pre><code>{"addresses":{"public":[{"ip":"62.76.41.218","is_primary":true,"isp":false},{"ip":"62.76.41.219","is_primary":false,"isp":false}]}}
+</code></pre>
+
+<h3 id="ip--1">Добавить IP-адрес</h3>
+
+<p><strong>HTTP метод:</strong> PUT<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/ips<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>subnet - подсеть (необязательный). Например: 62.76.41.*</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет </p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<h3 id="ip--2">Удалить IP-адрес</h3>
+
+<p><strong>HTTP метод:</strong> DELETE<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/ips<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS</li>
+  <li>ip - IP-адрес для удаления</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет </p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ip&gt;62.76.41.218&lt;/ip&gt;
+</code></pre>
+<pre><code>{"ip":"62.76.41.218"}
+</code></pre>
+
+<h3 id="ip----">Перемещение IP-адреса на другой сервер</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/ips/moveip/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS, НА который переносится адрес</li>
+  <li>ip - IP-адрес, который переносится</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет </p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p class="tip">Переносится могут только дополнительные адреса сервера!</p>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;ip&gt;62.76.41.218&lt;/ip&gt;
+</code></pre>
+<pre><code>{"ip":"62.76.41.218"}
+</code></pre>
+
+<h3 id="section-23">Список подсетей</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /servers/&lt;id&gt;/ips/getsubnets/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS, для которой получаются доступные сети</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>ip_subnet - подсеть</li>
+  <li>current - у данной VPS уже есть адреса в этой подсети (0|1)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка запроса</li>
+  <li>404 - VPS не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;nets&gt;
+  &lt;net&gt;
+    &lt;ip_subnet&gt;62.76.176.*&lt;/ip_subnet&gt;
+    &lt;current&gt;1&lt;/current&gt;
+  &lt;/net&gt;
+  &lt;net&gt;
+    &lt;ip_subnet&gt;62.76.177.*&lt;/ip_subnet&gt;
+    &lt;current&gt;0&lt;/current&gt;
+  &lt;/net&gt;
+  &lt;net&gt;
+    &lt;ip_subnet&gt;62.76.178.*&lt;/ip_subnet&gt;
+    &lt;current&gt;0&lt;/current&gt;
+  &lt;/net&gt;
+&lt;/nets&gt;
+</code></pre>
+<pre><code>{"nets":[
+	{"ip_subnet":"62.76.176.*","current":"1"},
+	{"ip_subnet":"62.76.177.*","current":"0"},
+	{"ip_subnet":"62.76.178.*","current":"0"},
+	{"ip_subnet":"62.76.47.*","current":"0"}
+]}
+</code></pre>
+
+<h2 id="dns">Управление DNS</h2>
+
+<h3 id="section-24">Получение списка зон</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /dns/<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>reverse - зоны обратного преобразования:</li>
+  <li>ip_value - ip адрес</li>
+  <li>virtual_mashines_title - имя VPS, на котором находится данные ip</li>
+  <li>reverse_value - dns-запись ip-адреса</li>
+  <li>domain_value - обратная зона</li>
+  <li>domains - домены:</li>
+  <li>id - id зоны</li>
+  <li>name - имя зоны</li>
+  <li>type - тип (MASTER, SLAVE)</li>
+  <li>records_count - количество записей в зоне</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+</ul>
+
+<h3 id="section-25">Добавление зоны</h3>
+
+<p><strong>HTTP метод:</strong> PUT<br />
+<strong>URI:</strong> /dns/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>newdomain - имя новой зоны</li>
+  <li>newdomain_type - тип зоны (MASTER, SLAVE)</li>
+  <li>slave_addr - адрес мастер-сервера для SLAVE-зоны (не указывается для MASTER-зоны)</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id созданное зоны</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - некорректные данные в запросе</li>
+</ul>
+
+<h3 id="section-26">Удаление зоны</h3>
+
+<p><strong>HTTP метод:</strong> DELETE<br />
+<strong>URI:</strong> /dns/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id зоны</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>404 - зона не найдена</li>
+</ul>
+
+<h3 id="section-27">Просмотр зоны</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /dns/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id зоны</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>record_types - типы доступных записей</li>
+  <li>records - записи в зоне:</li>
+  <li>id - id записи</li>
+  <li>domain_id - id зоны</li>
+  <li>name - имя записи</li>
+  <li>type - тип записи</li>
+  <li>content - содержимое записи</li>
+  <li>ttl - TTL</li>
+  <li>prio - приоритет</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - зона не найдена</li>
+</ul>
+
+<h3 id="section-28">Изменение зоны</h3>
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /dns/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id зоны</li>
+  <li>domain_master - установить адрес master-сервера для SLAVE-зоны (для MASTER-зоны не указывается)</li>
+  <li>&lt;поле&gt;_&lt;id записи&gt; - новое значение в поле:
+    <ul>
+      <li>поле - name | type | content | ttl | prio</li>
+      <li>id записи - если начинается с 0 - добавление новой записи</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка во входных параметрах</li>
+  <li>404 - зона не найдена</li>
+</ul>
+
+<h3 id="section-29">Удаление записи в зоне</h3>
+
+<p><strong>HTTP метод:</strong> DELETE<br />
+<strong>URI:</strong> /dns/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id зоны</li>
+  <li>delete_record - id записи</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>new_soa - новое значение “serial” SOA-записи в данной зоне</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - ошибка во входных параметрах</li>
+  <li>404 - зона не найдена</li>
+</ul>
+
+<h2 id="helpdesk">Обращение в службу поддержки (Helpdesk)</h2>
+
+<h3 id="section-30">Получение списка открытых запросов</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /helpdesk/<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id обращения</li>
+  <li>subject - тема</li>
+  <li>type_name - раздел обращений</li>
+  <li>status - статус обращения</li>
+  <li>status_id - id статуса обращения</li>
+  <li>open_date - дата открытия</li>
+  <li>is_new_events - есть ли в обращении новые сообщения</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;helpdesk&gt;
+  &lt;tickets&gt;
+    &lt;ticket&gt;
+      &lt;id&gt;299442&lt;/id&gt;
+      &lt;subject&gt;test req&lt;/subject&gt;
+      &lt;status&gt;Обрабатывается&lt;/status&gt;
+      &lt;type_name&gt;Общие вопросы&lt;/type_name&gt;
+      &lt;open_date&gt;2011-09-26 16:45:19&lt;/open_date&gt;
+      &lt;status_id&gt;1&lt;/status_id&gt;
+      &lt;is_new_events/&gt;
+    &lt;/ticket&gt;
+    &lt;ticket&gt;
+      &lt;id&gt;445822&lt;/id&gt;
+      &lt;subject&gt;test works&lt;/subject&gt;
+      &lt;status&gt;Обрабатывается&lt;/status&gt;
+      &lt;type_name&gt;Общие вопросы&lt;/type_name&gt;
+      &lt;open_date&gt;2012-01-20 12:41:12&lt;/open_date&gt;
+      &lt;status_id&gt;1&lt;/status_id&gt;
+      &lt;is_new_events/&gt;
+    &lt;/ticket&gt;
+  &lt;/tickets&gt;
+&lt;/helpdesk&gt;
+</code></pre>
+
+<h3 id="section-31">Получение содержимого запроса</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /helpdesk/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id обращения в службу поддержки</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id обращения</li>
+  <li>subject - тема</li>
+  <li>text - текст обращения</li>
+  <li>type_name - раздел обращений</li>
+  <li>status - статус обращения</li>
+  <li>status_id - id статуса обращения</li>
+  <li>open_date - дата открытия</li>
+  <li>operator_name - оператор, работающий над запросом</li>
+  <li>sla - флаг VIP-запроса</li>
+  <li>vote - отзыв пользователя на запрос (-1|0|1)</li>
+  <li>events - сообщение (события) в запросе:</li>
+  <li>ticket_events_id - id события</li>
+  <li>ticket_events_date - дата события</li>
+  <li>ticket_events_user_id - пользователь, добавивший событие</li>
+  <li>ticket_events_text - текст события</li>
+  <li>ticket_events_new_user - флаг новое событие</li>
+  <li>users_name - имя пользователя</li>
+  <li>is_user_msg - сообщение было написано создателем запроса</li>
+  <li>is_file - событие является приаттаченным файлом</li>
+  <li>works - платные работы по запросу</li>
+  <li>ticket_events_id - id события</li>
+  <li>ticket_events_date - дата события</li>
+  <li>ticket_events_user_id - пользователь, добавивший событие</li>
+  <li>ticket_events_text - ТЗ на работы</li>
+  <li>ticket_events_new_user - флаг новое событие</li>
+  <li>users_name - имя пользователя</li>
+  <li>is_user_msg - сообщение было написано создателем запроса</li>
+  <li>is_file - событие является приаттаченным файлом</li>
+  <li>works_time - время, необходимое на работы</li>
+  <li>works_cost - стоимость работ</li>
+  <li>works_user_accept - подтверждение пользователя (-1 - несогласен|0 - думает|1 - согласен)</li>
+  <li>works_actions - выполненные работы</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - запрос не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;helpdesk&gt;
+  &lt;ticket&gt;
+    &lt;id&gt;445822&lt;/id&gt;
+    &lt;text&gt;проверка работ&lt;/text&gt;
+    &lt;subject&gt;test works&lt;/subject&gt;
+    &lt;status&gt;Обрабатывается&lt;/status&gt;
+    &lt;status_id&gt;1&lt;/status_id&gt;
+    &lt;type_name&gt;Общие вопросы&lt;/type_name&gt;
+    &lt;open_date&gt;2012-01-20 12:41:12&lt;/open_date&gt;
+    &lt;operator_name&gt;Иван Петров&lt;/operator_name&gt;
+    &lt;sla&gt;1&lt;/sla&gt;
+    &lt;vote&gt;1&lt;/vote&gt;
+  &lt;/ticket&gt;
+  &lt;events&gt;
+    &lt;event&gt;
+      &lt;ticket_events_id&gt;3848242&lt;/ticket_events_id&gt;
+      &lt;ticket_events_date&gt;2012-01-25 17:44:13&lt;/ticket_events_date&gt;
+      &lt;ticket_events_user_id&gt;54&lt;/ticket_events_user_id&gt;
+      &lt;ticket_events_text&gt;test operator message&lt;/ticket_events_text&gt;
+      &lt;ticket_events_new_user&gt;0&lt;/ticket_events_new_user&gt;
+      &lt;users_name&gt;Иван Петров&lt;/users_name&gt;
+      &lt;is_user_msg/&gt;
+      &lt;is_file/&gt;
+    &lt;/event&gt;
+  &lt;/events&gt;
+  &lt;works&gt;
+    &lt;work&gt;
+      &lt;ticket_events_id&gt;3835122&lt;/ticket_events_id&gt;
+      &lt;ticket_events_date&gt;2012-01-24 13:07:49&lt;/ticket_events_date&gt;
+      &lt;ticket_events_user_id&gt;54&lt;/ticket_events_user_id&gt;
+      &lt;ticket_events_text&gt;test256&lt;/ticket_events_text&gt;
+      &lt;ticket_events_new_user&gt;0&lt;/ticket_events_new_user&gt;
+      &lt;users_name&gt;Иван Петров&lt;/users_name&gt;
+      &lt;is_user_msg/&gt;
+      &lt;is_file/&gt;
+      &lt;works_time&gt;2&lt;/works_time&gt;
+      &lt;works_cost&gt;1700&lt;/works_cost&gt;
+      &lt;works_user_accept&gt;-1&lt;/works_user_accept&gt;
+      &lt;works_actions/&gt;
+    &lt;/work&gt;
+    &lt;work&gt;
+      &lt;ticket_events_id&gt;3825702&lt;/ticket_events_id&gt;
+      &lt;ticket_events_date&gt;2012-01-23 17:07:22&lt;/ticket_events_date&gt;
+      &lt;ticket_events_user_id&gt;54&lt;/ticket_events_user_id&gt;
+      &lt;ticket_events_text&gt;test 2&lt;/ticket_events_text&gt;
+      &lt;ticket_events_new_user&gt;0&lt;/ticket_events_new_user&gt;
+      &lt;users_name&gt;Иван Петров&lt;/users_name&gt;
+      &lt;is_user_msg/&gt;
+      &lt;is_file/&gt;
+      &lt;works_time&gt;4&lt;/works_time&gt;
+      &lt;works_cost&gt;3400&lt;/works_cost&gt;
+      &lt;works_user_accept&gt;1&lt;/works_user_accept&gt;
+      &lt;works_actions/&gt;
+    &lt;/work&gt;
+  &lt;/works&gt;
+&lt;/helpdesk&gt;
+</code></pre>
+
+<h3 id="section-32">Добавление запроса в службу поддержки</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /helpdesk/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>tickets_type - раздел сообщений</li>
+  <li>tickets_subj - тема сообщения</li>
+  <li>tickets_text - сообщение</li>
+  <li>tickets_sla_type - флаг VIP-поддержки (0|1)</li>
+  <li>virtual_mashines_num - номер VPS, которой касается обращение</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;helpdesk&gt;
+  &lt;tickets_type&gt;1&lt;/tickets_type&gt;
+  &lt;tickets_subj&gt;Тема сообщения&lt;/tickets_subj&gt;
+  &lt;tickets_text&gt;Текст сообщения!!!&lt;/tickets_text&gt;
+  &lt;tickets_sla_type&gt;0&lt;/tickets_sla_type&gt;
+  &lt;virtual_mashines_num&gt;0&lt;/virtual_mashines_num&gt;
+&lt;/helpdesk&gt;
+</code></pre>
+
+<h3 id="section-33">Добавление сообщения в запрос</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /helpdesk/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id обращения в службу поддержки</li>
+  <li>text - сообщение</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;helpdesk&gt;
+  &lt;text&gt;Текст сообщения!!!&lt;/tickets_text&gt;
+&lt;/helpdesk&gt;
+</code></pre>
+
+<h2 id="section-34">Профиль пользователя</h2>
+
+<h3 id="section-35">Получение профиля пользователя</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /user/<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>users_id - id аккаунта</li>
+  <li>users_login - логин</li>
+  <li>users_last_visit - последний заход в панель управления</li>
+  <li>users_added - дата создания аккаунта</li>
+  <li>users_balance - текущий баланс</li>
+  <li>users_family - фамилия</li>
+  <li>users_firstname - имя</li>
+  <li>users_lastname - отчество</li>
+  <li>users_profile_jabber - Jabber</li>
+  <li>users_profile_email - Email</li>
+  <li>users_profile_phone - Телефон</li>
+  <li>users_profile_icq - ICQ</li>
+  <li>users_profile_skype - Skype</li>
+  <li>users_profile_facetype - владелец аккаунта (физ. лицо, юр. лицо и т.д.)</li>
+  <li>users_profile_orgname - название организации</li>
+  <li>users_profile_inn - ИНН</li>
+  <li>users_profile_address - юридический адрес</li>
+  <li>users_profile_formasobstv - форма собственности</li>
+  <li>users_profile_factaddress - фактический адрес</li>
+  <li>users_profile_ogrn - ОГРН</li>
+  <li>users_profile_okpo - ОКПО</li>
+  <li>users_profile_kpp - КПП</li>
+  <li>users_profile_raschschet - расчетный счет</li>
+  <li>users_profile_bik - БИК</li>
+  <li>users_profile_bank - наименование банка</li>
+  <li>users_profile_korrschet - корреспондентский счет</li>
+  <li>users_profile_dir - должность руководителя</li>
+  <li>users_profile_dirdocument - документ, на основании которого действут руководитель (‘u’ - устав, ‘d’ - доверенность, ‘s’ - свидетельство)</li>
+  <li>users_profile_dirdocumentnum - номер документа</li>
+  <li>users_profile_dirdocumentdate - дата выдачи документа</li>
+  <li>users_profile_dirfio - ФИО руководителя</li>
+  <li>users_profile_buhfio - ФИО главного бухгалтера</li>
+  <li>users_profile_workphone - рабочий телефон</li>
+  <li>users_profile_workphoneext - дополнительный номер к рабочему телефону</li>
+  <li>users_profile_fax - факс</li>
+  <li>users_profile_faxext - дополнительный номер к номеру факса</li>
+  <li>users_profile_mailaddress - почтовый адрес</li>
+  <li>users_profile_ident - контакт по финансовым вопросам идентичен основному (0|1)</li>
+  <li>users_profile_finfamily - фамилия</li>
+  <li>users_profile_finfirstname - имя</li>
+  <li>users_profile_finlastname - отчество</li>
+  <li>users_profile_finworkphone - рабочий телефон</li>
+  <li>users_profile_finworkphoneext - дополнительный номер к рабочему телефону</li>
+  <li>users_profile_finphone - мобильный телефон</li>
+  <li>users_profile_finfax - факс</li>
+  <li>users_profile_finfaxext - дополнительный номер к номеру факса</li>
+  <li>users_profile_finemail - электронная почта</li>
+  <li>users_profile_birthday - день рождения</li>
+  <li>users_profile_passportseries - серия пасспорта</li>
+  <li>users_profile_passportnumber - номер пасспорта</li>
+  <li>users_profile_passportdate - дата выдачи пасспорта</li>
+  <li>users_profile_passportwho - кем выдан пасспорт</li>
+  <li>users_profile_disableannounces - отключить почтовые рассылки (0|1)</li>
+  <li>users_profile_scalemoneysms - состояние баланса при котором отправлять SMS-уведомление ( 0 - уведомления не отсылаются)</li>
+  <li>users_profile_vpsdeletesms - уведомлять через SMS за сутки до окончания оплаченного срока Virtual Server (0|1)</li>
+  <li>users_profile_vbddeletesms - уведомлять через SMS за сутки до полного удаления диска (0|1)</li>
+  <li>users_profile_disableannouncesscale - отключить ежедневные рассылки по затратам ScaleServer</li>
+  <li>users_profile_authsms - SMS подтверждение аутентификации в панели управления (0|1)</li>
+  <li>default_vps_num - VPS, открываемый по-умолчанию</li>
+  <li>default_storage_num - хранилище ClodoStorage, открываемое по-умолчанию</li>
+  <li>scale_exists - на аккаунте есть ScaleServer (0|1)</li>
+  <li>allow_change_facetype - разрешено ли сменить владельца аккаунта (физ. лицо, юр. лицо и т.д.) (0|1)</li>
+  <li>dcs - список датацентров:</li>
+  <li>id - id ДЦ</li>
+  <li>apihost - хост для запросов к API</li>
+  <li>title - название ДЦ</li>
+  <li>auth_ips - список ip-адресов, с которых разрешен доступ в панель управления:</li>
+  <li>ip - адрес</li>
+  <li>auth_log - протокол аутентификации в панель управления:</li>
+  <li>auth_date - дата аутентификации</li>
+  <li>auth_ip - ip, с которого пришел запрос</li>
+  <li>auth_status - статус (ОК|Ошибка)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+</ul>
+
+<h3 id="section-36">Изменение профиля пользователя</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /user/update<br />
+<strong>Входные параметры:</strong> значения переменных из предыдущего пункта</p>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>400 - некорректные параметры</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;user&gt;
+  &lt;users_profile_jabber&gt;test@jabber.com&lt;/users_profile_jabber&gt;
+  &lt;users_profile_icq&gt;13382781&lt;/users_profile_icq&gt;
+&lt;/user&gt;
+</code></pre>
+<pre><code>{"users_profile_jabber":"test@jabber.com,
+	"users_profile_icq":"13382781"}
+</code></pre>
+
+<h2 id="cloud-storage">Cloud Storage</h2>
+
+<h3 id="section-37">Получение списка хранилищ</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /storage/<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id хранилища</li>
+  <li>title - нахвание хранилища</li>
+  <li>login - имя пользователя</li>
+  <li>cluster - хост для подключения</li>
+  <li>key - Storage Key</li>
+  <li>size - размер данных в хранилище (в байтах)</li>
+  <li>token - токен для работы с хранилищем</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;storages&gt;
+  &lt;storage&gt;
+    &lt;id&gt;1&lt;/id&gt;
+    &lt;title&gt;storage&lt;/title&gt;
+    &lt;login&gt;storage_123_1&lt;/login&gt;
+    &lt;cluster&gt;cs1.clodo.ru:80&lt;/cluster&gt;
+    &lt;key&gt;CLODO_440233b83e04c723727aa2116f10a781&lt;/key&gt;
+    &lt;size&gt;19282934228&lt;/size&gt;
+    &lt;token&gt;CLODO_2f5e4af28424687f3f63047d581f36f2&lt;/token&gt;
+  &lt;/storage&gt;
+  &lt;storage&gt;
+    &lt;id&gt;5&lt;/id&gt;
+    &lt;title&gt;test1&lt;/title&gt;
+    &lt;login&gt;storage_123_10&lt;/login&gt;
+    &lt;cluster&gt;cs1.clodo.ru:80&lt;/cluster&gt;
+    &lt;key&gt;CLODO_3aef93049d655bb86994273d338c9474&lt;/key&gt;
+    &lt;size&gt;24979167&lt;/size&gt;
+    &lt;token&gt;CLODO_4239536e2a674889401182f3548536f7&lt;/token&gt;
+  &lt;/storage&gt;
+&lt;/storages&gt;
+</code></pre>
+
+<h3 id="section-38">Получение расширенной информации о хранилище</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /storage/&lt;id&gt;/detail<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id хранилища</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id хранилища</li>
+  <li>title - нахвание хранилища</li>
+  <li>login - имя пользователя</li>
+  <li>cluster - хост для подключения</li>
+  <li>key - Storage Key</li>
+  <li>size - размер данных в хранилище (в байтах)</li>
+  <li>is_default - открывать по-умолчанию</li>
+  <li>cache_xomcc - X-Object-Meta-Cache-Control</li>
+  <li>cache_expires - директива expires</li>
+  <li>cache_bypass - заголовок для обновления кэша</li>
+  <li>cache_refererfilter - фильтр источника запросов</li>
+  <li>cache_publicsearch - начинать поиск с контейнера Public (0|1)</li>
+  <li>public_url - публичный домен</li>
+  <li>public_url_checked - статус проверки публичного домена</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - хранилище не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;storage&gt;
+  &lt;id&gt;1&lt;/id&gt;
+  &lt;title&gt;storage&lt;/title&gt;
+  &lt;login&gt;storage_123_1&lt;/login&gt;
+  &lt;cluster&gt;cs1.clodo.ru:80&lt;/cluster&gt;
+  &lt;key&gt;CLODO_440233b83e04c723727aa2116f10a781&lt;/key&gt;
+  &lt;size&gt;19282934228&lt;/size&gt;
+  &lt;is_default&gt;0&lt;/is_default&gt;
+  &lt;cache_xomcc&gt;0&lt;/cache_xomcc&gt;
+  &lt;cache_expires&gt;off&lt;/cache_expires&gt;
+  &lt;cache_bypass&gt;X-Cache-Bypass-xjKRssBE&lt;/cache_bypass&gt;
+  &lt;cache_refererfilter/&gt;
+  &lt;cache_publicsearch&gt;1&lt;/cache_publicsearch&gt;
+  &lt;public_url&gt;storage.test.com&lt;/public_url&gt;
+  &lt;public_url_checked&gt;checked&lt;/public_url_checked&gt;
+&lt;/storage&gt;
+</code></pre>
+
+<h3 id="section-39">Изменение настроек хранилища</h3>
+
+<p><strong>HTTP метод:</strong> POST<br />
+<strong>URI:</strong> /storage/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id хранилища</li>
+  <li>title - нахвание хранилища</li>
+  <li>cache_xomcc - X-Object-Meta-Cache-Control</li>
+  <li>cache_expires - директива expires</li>
+  <li>cache_bypass - заголовок для обновления кэша</li>
+  <li>cache_refererfilter - фильтр источника запросов</li>
+  <li>cache_publicsearch - начинать поиск с контейнера Public (0|1)</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> список измененных параметров с новыми значениями</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>204 - изменений небыло</li>
+  <li>400 - ошибка сохранения изменений</li>
+  <li>404 - хранилище не найдено</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;storage&gt;
+  &lt;title&gt;storage&lt;/title&gt;
+  &lt;cache_bypass&gt;X-Cache-Bypass-xjKRssBE&lt;/cache_bypass&gt;
+&lt;/storage&gt;
+</code></pre>
+
+<h3 id="section-40">Создание хранилища</h3>
+
+<p><strong>HTTP метод:</strong> PUT<br />
+<strong>URI:</strong> /storage/<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>title - нахвание хранилища</li>
+  <li>cache_xomcc - X-Object-Meta-Cache-Control</li>
+  <li>cache_expires - директива expires</li>
+  <li>cache_bypass - заголовок для обновления кэша</li>
+  <li>cache_refererfilter - фильтр источника запросов</li>
+  <li>cache_publicsearch - начинать поиск с контейнера Public (0|1)</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id хранилища</li>
+  <li>login - имя пользователя</li>
+  <li>cluster - хост для подключения</li>
+  <li>key - API Key</li>
+  <li>storagekey - Storage Key</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>400 - ошибка создания хранилища</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;storage&gt;
+  &lt;title&gt;storage&lt;/title&gt;
+&lt;/storage&gt;
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;storage&gt;
+  &lt;id&gt;123&lt;/id&gt;
+  &lt;login&gt;storage_123_1&lt;/login&gt;
+  &lt;cluster&gt;cs1.clodo.ru:80&lt;/cluster&gt;
+  &lt;key&gt;CLODO_4239536e2a674889401182f3548536f7&lt;/key&gt;
+  &lt;storagekey&gt;CLODO_440233b83e04c723727aa2116f10a781&lt;/storagekey&gt;
+&lt;/storage&gt;
+</code></pre>
+
+<h3 id="section-41">Удаление хранилища</h3>
+
+<p><strong>HTTP метод:</strong> DELETE<br />
+<strong>URI:</strong> /storage/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id хранилища</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong> нет</p>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>204 - без ошибок</li>
+  <li>404 - хранилище не найдено</li>
+</ul>
+
+<h2 id="section-42">Дополнительные возможности</h2>
+
+<h3 id="section-43">Получение статуса запроса</h3>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /requests/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - id запроса</li>
+</ul>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>vps_num - номер VPS</li>
+  <li>req_complete - флаг завершения обработки запроса</li>
+  <li>req_complete_date - дата завершения обработки запроса</li>
+  <li>req_inwork - дата начала обработки запроса</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - запрос не найден</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;request&gt;
+	&lt;vps_num/&gt;
+	&lt;req_complete&gt;1&lt;/req_complete&gt;
+	&lt;req_complete_date&gt;2011-03-11 14:48:31&lt;/req_complete_date&gt;
+	&lt;req_requests_inwork&gt;2011-03-11 14:36:56&lt;/req_requests_inwork&gt;
+&lt;/request&gt;
+</code></pre>
+
+<h3 id="section-44">Запросы информации по биллингу</h3>
+
+<h4 id="section-45">Получить текущий баланс</h4>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /billing/balance<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>balance - текущий баланс</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - записей не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;balance&gt;1234&lt;/balance&gt;
+</code></pre>
+
+<h4 id="section-46">Получить список операций по счету за период (либо за текущий день по умолчанию)</h4>
+
+<p><strong>HTTP метод:</strong> GET, POST<br />
+<strong>URI:</strong> /billing, /billing/&lt;id&gt;<br />
+<strong>Входные параметры:</strong></p>
+
+<ul>
+  <li>URI: id - номер VPS (не обязательный)</li>
+  <li>from - дата начала периода (по умолчанию - начало текущего дня)</li>
+  <li>to - дата окончания периода (по умолчанию - текущий момент)</li>
+  <li>Выходные параметры:</li>
+  <li>total_debit_amount - суммарные списания за период</li>
+  <li>total_credit_amount - суммарные поступления за период</li>
+  <li>debits - списания по типам:</li>
+  <li>mem - Scale Server - ресурсы оперативной памяти</li>
+  <li>cpu - Scale Server - ресурсы процессора</li>
+  <li>vps - Virtual Server - фиксированные ресурсы</li>
+  <li>vbd - Использование дисковых ресурсов</li>
+  <li>vbd_io - Дисковые операции ввода/вывода</li>
+  <li>traff - Предоплаченые пакеты трафика</li>
+  <li>traffin - Входящий трафик (полных гигабайт)</li>
+  <li>traffout - Исходящий трафик (полных гигабайт)</li>
+  <li>ip - Дополнительные IP</li>
+  <li>admin - Услуги расширенного администрирования</li>
+  <li>ispprorent - Аренда лицензии ISPmanager PRO</li>
+  <li>backup - Использование диска для резервных копий</li>
+  <li>sms - SMS уведомления</li>
+  <li>cloudstoragesize - Cloud Storage - использование диска</li>
+  <li>cloudstoragetraffout - Cloud Storage - исходящий трафик (полных гигабайт)</li>
+  <li>cloudstoragereqs - Cloud Storage - запросы к хранилищу</li>
+  <li>credits - поступления</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - записей не найдено</li>
+</ul>
+
+<p><strong>Пример запроса:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;billing&gt;
+  &lt;from&gt;2011-04-04 00:00:00&lt;/from&gt;
+  &lt;to&gt;2011-04-04 23:59:59&lt;/to&gt;
+&lt;/billing&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;billing&gt;
+  &lt;from&gt;1301860800&lt;/from&gt;
+  &lt;to&gt;1301947199&lt;/to&gt;
+&lt;/billing&gt;
+</code></pre>
+<pre><code>{"billing":{"from":"1301860800","to":"1301947199"}}
+</code></pre>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;billing&gt;
+  &lt;total_debit_amount&gt;57.78&lt;/total_debit_amount&gt;
+  &lt;total_credit_amount&gt;0&lt;/total_credit_amount&gt;
+  &lt;period&gt;25.01.2012&lt;/period&gt;
+  &lt;debits&gt;
+    &lt;vbd&gt;
+      &lt;debits_amount&gt;3.8&lt;/debits_amount&gt;
+      &lt;debits_count&gt;380&lt;/debits_count&gt;
+    &lt;/vbd&gt;
+    &lt;vps&gt;
+      &lt;debits_amount&gt;17.550&lt;/debits_amount&gt;
+      &lt;debits_count&gt;13.00&lt;/debits_count&gt;
+    &lt;/vps&gt;
+    &lt;mem&gt;
+      &lt;debits_amount&gt;24.48&lt;/debits_amount&gt;
+      &lt;debits_count&gt;2448&lt;/debits_count&gt;
+    &lt;/mem&gt;
+    &lt;cpu&gt;
+      &lt;debits_amount&gt;0.900&lt;/debits_amount&gt;
+      &lt;debits_count&gt;2160.00&lt;/debits_count&gt;
+    &lt;/cpu&gt;
+    &lt;backup&gt;
+      &lt;debits_amount&gt;8.580&lt;/debits_amount&gt;
+      &lt;debits_count&gt;858.00&lt;/debits_count&gt;
+    &lt;/backup&gt;
+    &lt;cloudstoragesize&gt;
+      &lt;debits_amount&gt;2.470&lt;/debits_amount&gt;
+      &lt;debits_count&gt;247.00&lt;/debits_count&gt;
+    &lt;/cloudstoragesize&gt;
+  &lt;/debits&gt;
+&lt;/billing&gt;
+</code></pre>
+<pre><code>{"billing":{
+	"total_debit_amount":57.82,
+	"total_credit_amount":0,
+	"period":"25.01.2012",
+	"debits":{
+		"vbd":{
+			"debits_amount":3.8,
+			"debits_count":380},
+		"vps":{
+			"debits_amount":17.550,
+			"debits_count":13.00},
+		"mem":{
+			"debits_amount":24.52,
+			"debits_count":2452},
+		"cpu":{
+			"debits_amount":0.900,
+			"debits_count":2160.00},
+		"backup":{
+			"debits_amount":8.580,
+			"debits_count":858.00},
+		"cloudstoragesize":{
+			"debits_amount":2.470,
+			"debits_count":247.00}
+	},
+	"credits":[]
+	}
+}
+</code></pre>
+
+<h3 id="images">Доступные операционные системы (Images)</h3>
+
+<h4 id="section-47">Получить список доступных ОС</h4>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /images<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id ОС</li>
+  <li>name - название ОС</li>
+  <li>status - статус</li>
+  <li>vps_type - тип VPS</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;images&gt;
+  &lt;image id="1" name="Debian 5.0.6 64 bits" vps_type="VirtualServer" status="ACTIVE"/&gt;
+  &lt;image id="3" name="CentOS 5.5 32 bits" vps_type="VirtualServer" status="ACTIVE"/&gt;
+  &lt;image id="381" name="Debian 5.0.6 64 bits" vps_type="ScaleServer" status="ACTIVE"/&gt;
+&lt;/images&gt;
+</code></pre>
+
+<h4 id="section-48">Получить список доступных ОС (детализированно)</h4>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /images/detail<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id ОС</li>
+  <li>name - название ОС</li>
+  <li>status - статус</li>
+  <li>vps_type - тип VPS</li>
+  <li>os_type - тип ОС (debian,centos,bitrix и т.д)</li>
+  <li>os_bits - битность</li>
+  <li>os_hvm - флаг HVM</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;images&gt;
+  &lt;image id="1" name="Debian 5.0.6 64 bits" vps_type="VirtualServer" status="ACTIVE"&gt;
+    &lt;os_type&gt;debian&lt;/os_type&gt;
+    &lt;os_bits&gt;64&lt;/os_bits&gt;
+    &lt;os_hvm&gt;0&lt;/os_hvm&gt;
+  &lt;/image&gt;
+  &lt;image id="3" name="CentOS 5.5 32 bits" vps_type="VirtualServer" status="ACTIVE"&gt;
+    &lt;os_type&gt;centos&lt;/os_type&gt;
+    &lt;os_bits&gt;32&lt;/os_bits&gt;
+    &lt;os_hvm&gt;0&lt;/os_hvm&gt;
+  &lt;/image&gt;
+  &lt;image id="381" name="Debian 5.0.6 64 bits" vps_type="ScaleServer" status="ACTIVE"&gt;
+    &lt;os_type&gt;debian&lt;/os_type&gt;
+    &lt;os_bits&gt;64&lt;/os_bits&gt;
+    &lt;os_hvm&gt;0&lt;/os_hvm&gt;
+  &lt;/image&gt;
+&lt;/images&gt;
+</code></pre>
+
+<h4 id="section-49">Получить список доступных пресетов</h4>
+
+<p><strong>HTTP метод:</strong> GET<br />
+<strong>URI:</strong> /images/presets<br />
+<strong>Входные параметры:</strong> нет</p>
+
+<p><strong>Выходные параметры:</strong></p>
+
+<ul>
+  <li>id - id пресета</li>
+  <li>name - техническое название пресета</li>
+  <li>title - пользовательское название пресета</li>
+  <li>description - описание</li>
+  <li>fields - дополнительные параметры, необходимые при установке:</li>
+  <li>title - название поля</li>
+  <li>name - имя переменной</li>
+  <li>type - тип поля:</li>
+  <li>string - простое текстовое поле</li>
+  <li>login - поле для логина (не менее 5 символов)</li>
+  <li>password - поле для пароля (не менее символов)</li>
+  <li>email - электронный ящик</li>
+  <li>domain - имя домена</li>
+  <li>req - флаг обязательности поля (0|1)</li>
+</ul>
+
+<p><strong>Коды возврата:</strong></p>
+
+<ul>
+  <li>200 - без ошибок</li>
+  <li>404 - не найдено</li>
+</ul>
+
+<p><strong>Пример ответа:</strong></p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;presets&gt;
+  &lt;preset&gt;
+    &lt;id&gt;62&lt;/id&gt;
+    &lt;name&gt;bitrix&lt;/name&gt;
+    &lt;title&gt;Bitrix&lt;/title&gt;
+    &lt;description&gt;&lt;p&gt;«1С-Битрикс: Управление сайтом» - профессиональная система управления веб-проектами,
+				универсальный программный продукт для создания, поддержки и успешного развития: &lt;/p&gt;
+        &lt;ul&gt;
+        &lt;li&gt;корпоративных сайтов&lt;/li&gt;
+        &lt;li&gt;интернет-магазинов&lt;/li&gt;
+        &lt;li&gt;информационных порталов&lt;/li&gt;
+        &lt;li&gt;сайтов сообществ&lt;/li&gt;
+        &lt;li&gt;социальных сетей и других веб-проектов &lt;/li&gt;
+    &lt;/ul&gt;&lt;/description&gt;
+    &lt;fields&gt;
+      &lt;field&gt;
+        &lt;title&gt;Логин администратора&lt;/title&gt;
+        &lt;name&gt;login&lt;/name&gt;
+        &lt;type&gt;login&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Пароль администратора&lt;/title&gt;
+        &lt;name&gt;pass&lt;/name&gt;
+        &lt;type&gt;password&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Почта администратора&lt;/title&gt;
+        &lt;name&gt;email&lt;/name&gt;
+        &lt;type&gt;email&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Домен&lt;/title&gt;
+        &lt;name&gt;domain&lt;/name&gt;
+        &lt;type&gt;domain&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Название сайта&lt;/title&gt;
+        &lt;name&gt;title&lt;/name&gt;
+        &lt;type&gt;string&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Лицензия&lt;/title&gt;
+        &lt;name&gt;license&lt;/name&gt;
+        &lt;type&gt;string&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+    &lt;/fields&gt;
+  &lt;/preset&gt;
+  &lt;preset&gt;
+    &lt;id&gt;322&lt;/id&gt;
+    &lt;name&gt;gitlabhq&lt;/name&gt;
+    &lt;title&gt;Gitlabhq&lt;/title&gt;
+    &lt;description&gt;gitlabhq&lt;/description&gt;
+    &lt;fields&gt;
+      &lt;field&gt;
+        &lt;title&gt;Логин администратора&lt;/title&gt;
+        &lt;name&gt;login&lt;/name&gt;
+        &lt;type&gt;login&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Пароль администратора&lt;/title&gt;
+        &lt;name&gt;pass&lt;/name&gt;
+        &lt;type&gt;password&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Почта администратора&lt;/title&gt;
+        &lt;name&gt;email&lt;/name&gt;
+        &lt;type&gt;email&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+      &lt;field&gt;
+        &lt;title&gt;Домен&lt;/title&gt;
+        &lt;name&gt;domain&lt;/name&gt;
+        &lt;type&gt;domain&lt;/type&gt;
+        &lt;req&gt;1&lt;/req&gt;
+      &lt;/field&gt;
+    &lt;/fields&gt;
+  &lt;/preset&gt;
+&lt;/presets&gt;
+</code></pre>
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>

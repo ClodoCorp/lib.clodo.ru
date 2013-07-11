@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	
+		<title>Подключение в 1С-Битрикс</title>
+	
+	
+	<meta name="keywords" content="хостинг, виртуальный сервер, vds, vps, cloud" />
+	<meta name="description" content="База знаний поможет Вам в вопросах администрирования Вашего виртуального сервера VPS/VDS. База знаний содержит материалы по развертыванию широкого спектра серверных решений, от веб-серверов с базами данных до более сложных конфигураций." />
+	<link rel="stylesheet" href="/pstyle.css" type="text/css" media="screen" />
+
+	<link rel="shortcut icon" href="http://lib.clodo.ru/favicon.ico" />
+	<link rel="image_src" href="http://lib.clodo.ru/favicon.ico" />
+
+	<!--[if IE]>
+
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+		<script type="text/javascript" src="/js/excanvas.js"></script>
+		<style type="text/css">
+		table.header td {
+			padding:0;
+		}
+		.contentcolumn div.serverlist {
+			width: 40%;
+			margin: 15px 3% 25px 3%;
+		}
+		table.header td.menu table.main_menu div {
+			margin-left: 2px;
+		}
+		</style>
+	<![endif]-->
+
+	<!-- GOOGLE SEARCH -->
+	<script>
+	  (function() {
+	    var cx = '005661710072474951780:6ywyu3asnyk';
+	    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+</head>
+
+<body>
+
+<!-- test -->
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr><td height="115">
+		<div class="botsi"></div>
+		<div class="header"></div>
+		<table cellpadding="0" cellspacing="0" width="100%" border="0" class="header">
+			<tr>
+				<td rowspan="2" class="logo"><a href="/"><img src="/images/def_skin/logo.png" border="0" alt="Панель управления хостингом CLODO.RU" /></a></td>
+				<td rowspan="2" class="slog">
+					<p><nobr>База знаний Clodo.ru</nobr><br /> <font class="mslink"><a href="http://www.clodo.ru">Перейти на сайт clodo.ru</a></font></p>
+				</td>
+				<td class="user" align="right">
+				
+				<!-- GOOGLE SEARCH BOX -->
+				<div class='searchbox'>
+					<gcse:searchbox-only newWindow="false" enableAutoComplete='true'></gcse:searchbox-only>
+				</div>
+				<!-- /GOOGLE SEARCH BOX -->
+				
+				</td> 
+			</tr>
+			<tr>
+				<td class="menu" align="right" valign="bottom">
+		
+
+
+					<table cellpadding="0" cellspacing="0" border="0" class="main_menu">
+						<tr>
+							<td><div><a href="http://panel.clodo.ru/">Панель управления</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div><a href="http://forum.clodo.ru">Форум&nbsp;поддержки</a></div></td>
+							<td class="menusep">&nbsp;</td>
+							<td><div class="current"><a href="/">База знаний</a></div></td>
+
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</td></tr>
+	<tr><td valign="top">
+		<div class="maincontainer">
+		<table cellpadding="0" cellspacing="0" width="100%" style="padding: 0 30px;">
+			<tr>
+				<td valign="top" width="20%">
+				<div class="balanceblock">
+				<div class="cashflow">
+
+
+					<!-- LEFT MENU -->
+					<div class="categoryhead"><b>Разделы базы знаний</b></div>
+
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/clodo/">Хостинг Clodo.ru</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item nobottomborder"><a href="/cloud-storage/">Облачное хранилище</a></div>
+								<div class="category2item">
+									
+											<div class="category1item"><a href="/cloud-storage/cloudstorage.html">Облачное хранилище Clodo</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/subdomain_for_cloudstorage.html">Привязка поддомена</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/ftp_to_cs.html">FTP сервер для CloudStorage</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/cyberduck.html">Cyberduck</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/backupninja-cloud.html">Создание резервной копии на Cloud Storage</a></div>
+									
+											<div class="category1item"><a href="/cloud-storage/bitrix-cloudstorage.html">Подключение в 1С-Битрикс</a></div>
+									
+								</div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/vps-control-panel/">Панели управления VPS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/getting-started/">Первые шаги</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux/">Используем Linux</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/CMS/">CMS</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/web-server/">WEB-Сервер</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/email/">Email</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/linux-security/">Безопасность</a></div>
+							
+						
+							
+							
+
+							
+								<div class="category1item"><a href="/network/">Сеть</a></div>
+							
+						
+							
+					</div>
+					<!-- !LEFT MENU -->
+
+				</div>
+				</td>
+				<td valign="top" width="80%" class="maintd">
+			<div class="contentwrapper">
+				<div class="contentcolumn" style="margin-left: 0;">
+					<div class="innertube">
+
+	<!-- TOP NAVIBAR _ START-->
+<div class="crosh">
+	<a href="/">База знаний</a> ::
+	<a href="/cloud-storage/">Облачное хранилище</a> :: 
+	Подключение в 1С-Битрикс
+</div>
+<!-- TOP NAVIBAR _ END-->
+
+<h1>Подключение облачного хранилища в CMS 1С-Битрикс</h1>
+
+<!-- ARTICLE _ START -->
+<ul id="markdown-toc">
+  <li><a href="#section">Создание хранилища и привязка к нему поддомена</a></li>
+  <li><a href="#section-1">Добавление хранилища в 1С-Битрикс</a></li>
+  <li><a href="#section-2">Перенос файлов в хранилище</a></li>
+</ul>
+
+<p>В 11 версии CMS “1С-Битрикс” появился модуль “Облачные хранилища”, который позволяет загружать статичные файлы (изображения, pdf и пр.) с сайта в облачные хранилища данных и затем автоматически предоставлять ссылку для скачивания или просмотра этих файлов посетителям вашего сайта, или встраивать их непосредственно в сайт. </p>
+
+<p>В результате использования облачных хранилищ</p>
+
+<ul>
+  <li>“Тяжелые” элементы сайта - например, большие картинки, начнут загружаться быстрее - клиентам будет приятнее работать с сайтом, повысится их лояльность и число заказов;</li>
+  <li>Статические данные будут надежно защищены от потери многократным резервированием;</li>
+  <li>Освободится место на сервере, на котором запущен “1С-Битрикс” - вам не придется думать о смене тарифа только из-за того, что сайт стал больше;</li>
+  <li>Снизится нагрузка на текущий сервер, поскольку он не будет заниматься раздачей статических файлов;</li>
+  <li>Переезд с хостинга на хостинг станет сильно проще: не потребуется переносить большое количество файлов.</li>
+</ul>
+
+<p>Все это доступно без смены хостинга: неважно, на каком хостинге расположен сайт - статические  файлы можно перенести в облачное хранилище с минимумом трудозатрат. <strong>Чтобы использовать облачное хранилище Clodo с “Битриксом” совершенно необязательно использовать Clodo как хостинг для самого “Битрикса”.</strong></p>
+
+<p>Одним из поддерживаемых хранилищ является Cloud Storage от Clodo.ru. Более подробно об облачном хранилище Clodo.ru вы можете узнать на сайте <a href="http://clodo.ru/cloud-storage/" title="Облачный хостинг Clodo">Clodo</a>.</p>
+
+<p>Настройка производится всего в несколько простых шагов. При помощи этой пошаговой инструкции Вы сможете произвести ее самостоятельно. И помните - Вы всегда можете обратиться в техническую поддержку Clodo, которая поможет Вам, если что-то пойдет не так.</p>
+
+<p>Настройка состоит из следующих шагов:</p>
+
+<ul>
+  <li>Создание хранилища и привязка к нему поддомена, с которого и будет осуществляться загрузка файлов;</li>
+  <li>Добавление хранилища в “1С-Битрикс”;</li>
+  <li>Перенос файлов в хранилище.</li>
+</ul>
+
+<h2 id="section">Создание хранилища и привязка к нему поддомена</h2>
+
+<p>Создание хранилища делается за пару кликов в <a href="https://panel.clodo.ru" title="Панель управления Clodo.ru">панели управления Clodo</a>. Достаточно перейти на вкладку <a href="https://panel.clodo.ru/#storage" title="Панель управления Clodo.ru &gt; CloudStorage">“Cloud Storage”</a> и нажать на кнопку “Создать хранилище”. 
+При создании хранилища можно задать его название (это сделано для вашего собственного ориентирования в хранилищах, если оно не одно). Сразу после создания хранилища будет сообщен ключ к нему - это идентификатор, при помощи которого сторонние приложения (например, “1С-Битрикс”) могут получать доступ к хранилищу. Этот ключ следует записать.</p>
+
+<p>Процедура привязки поддомена несложна: она подробно расписана в нашей другой статье <a href="/cloud-storage/subdomain_for_cloudstorage.html" title="Привязка поддомена к Хранилищу">“Привязка поддомена к Хранилищу”</a>.</p>
+
+<h2 id="section-1">Добавление хранилища в 1С-Битрикс</h2>
+
+<p>В административной части 1С-Битрикс необходимо открыть раздел “Настройки” -&gt; “Облачные хранилища” и там нажать на кнопку “Добавить”.</p>
+
+<p><img src="/images/cloudstorage/bitrix/add-cloudstorage.png" alt="Добавление хранилища в 1С-Битрикс" /></p>
+
+<p>При добавлении нового облачного хранилища в 1С-Битрикс вам будет предложено выбрать провайдера услуг. Необходимо выбрать пункт “Clodo.ru”. Если же такого пункта нет, то выбирайте “OpenStack Object Storage”.</p>
+
+<p><img src="/images/cloudstorage/bitrix/select-provider.png" alt="Выбор провайдера услуг" /></p>
+
+<p>Далее необходимо скопировать данные для подключения к вашему хранилищу. Эти данные вы можете узнать на странице информации об облачном хранилище в панели управления Clodo.ru.</p>
+
+<p><img src="/images/cloudstorage/bitrix/cs-panel-info.png" alt="Параметры хранилища в панели Clodo.ru" /></p>
+
+<p>Пункт “API host” из информации соответствует параметру “Имя сервера” в 1С-Битрикс; “API user” - “Имя пользователя”; “API key” - “Ключ доступа”.</p>
+
+<p class="tip">Если вы забыли или потеряли ключ доступа к хранилищу, его всегда можно изменить в панели управления нажав на ссылку “Перегенирировать ключ”. Новый ключ будет сразу же отображен в диалоговом окне в панели управления. Также не забудьте изменить ключ в настройках хранилища в 1С-Битрикс.</p>
+
+<p>В параметре “Контейнер” необходимо вписать “public”, чтобы ссылки на файлы были более короткие и “красивые”. А в пункт “Каноническое имя домена” необходимо вписать поддомен, который вы привязали к хранилищу (Public access URL).</p>
+
+<p class="tip">По умолчанию к каждому хранилищу привязывается технический домен. Вы можете домен, которым вы владеете. Процедура прявязки подробно описана в статье <a href="/cloud-storage/subdomain_for_cloudstorage.html" title="Привязка поддомена к Хранилищу">“Привязка поддомена к Облачному Хранилищу”</a>.</p>
+
+<p>Поля “Активность”, “Сортировка” и “Только для чтения” установите как на скриншоте ниже.</p>
+
+<p><img src="/images/cloudstorage/bitrix/bitrix-settings.png" alt="Настройка параметров хранилища в CMS 1С-Битрикс" /></p>
+
+<p>После этого нажмите на кнопку “Сохранить”. </p>
+
+<p>Хранилище добавлено в “1С-Битрикс”. Если CMS сообщила об ошибке, то следует проверить правильность введённых данных и повторить сохранение параметров.</p>
+
+<h2 id="section-2">Перенос файлов в хранилище</h2>
+
+<p>После привязки хранилища новые статические данные, загружаемые на сайт, автоматически будут попадать в хранилище. Имевшиеся до привязки данные автоматически в хранилище не переместятся - однако для большей эффективности использования хранилища, их следует все же переместить. </p>
+
+<p>Нужно выбрать пункт “Переместить файлы в облачное хранилище” в опциях только что привязанного облачного хранилища. Прогресс переноса можно наблюдать на этой же странице (не закрывайте окно браузера до окончания переноса файлов). Процесс переноса может занимать достаточно много времени, поскольку облачное хранилище Clodo оптимизировано прежде всего на раздачу файлов, а не на их закачку.</p>
+
+<p><img src="/images/cloudstorage/bitrix/bitrix-settings.png" alt="Перенос статичных файлов в облачное хранилище в CMS 1С-Битрикс" /></p>
+
+<p>После этого все статичные файлы будут автоматически загружаться из облачного хранилища Clodo.ru, а новые загружаемые на сайт файлы, будут автоматически перемещены в хранилище.</p>
+
+
+<!-- ARTICLE _ END -->
+
+<h6 class="usl">Условия использования документа</h6>
+<p>Материал представленный на данной странице может быть использован Вами по своему усмотрению. Разрешается копирование и распространение предоставленного материала без изменения содержания и без предварительного уведомления администрации <a class='out' target='_blank' href="http://www.clodo.ru">Clodo.ru</a>.</p>
+<p>Мы будем признательны Вам за сообщения об ошибках в представленной документации и за предложения об улучшении документации. По этим вопросам необходимо обращаться по адресу <a href="mailto:mail@clodo.ru">mail@clodo.ru</a>. При обращении не забывайте указывать URL-адрес публикации.</p>
+
+					</div>
+				</div>
+			</div>
+
+				</td>
+			</tr>
+		</table>
+		</div>
+
+			<div class="footer">
+				Техническая поддержка: <a href="mailto:support@clodo.ru">support@clodo.ru</a> | СПб: +7 (812) 380-24-97 | Москва: +7 (499) 504-98-28 | Jabber: support@clodo.ru
+			</div>
+
+	</td></tr>
+	</table>
+
+</body>
+</html>
