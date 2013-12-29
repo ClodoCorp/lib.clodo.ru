@@ -166,7 +166,7 @@
 	}
 	table.header td.logo img {
 		border-right: solid 1px #666;
-		padding-right: 30px;
+		padding: 12px 30px 13px 0px;
 	}
 	table.header td.slog {
 		padding: 20px 30px;
