@@ -73,7 +73,7 @@ category: "Первые шаги"
 
 ![](http://static.clodo.ru/lib-images/clodo_panel/panel_hdd_advanced.png)
 
-Здесь можно изменять
+Здесь можно изменять:
 1. Объём дискового хранилища
 2. Объём swap-диска
 3. Работу шейпера дисковых операций.
